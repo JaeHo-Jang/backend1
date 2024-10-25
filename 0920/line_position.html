@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            height: 300px;
+        }
+        .grad{
+            background: blue;
+            background: -webkit-linear-gradient(to right bottom, blue, white);
+            background: -moz-linear-gradient(to right bottom, blue, white);
+            background: -o-linear-gradient(to right bottom, blue, white);
+            /* 윈도우 7등 아래버전같은 경우 브라우저도 2.0이상이 깔리지 않을 수 있어서 구버전 최적화를 위한 추가 코딩임 */
+            background: linear-gradient(to right bottom, blue, white);
+            /* 라이너 하나만 써도 되는데, 브라우저마다 다를수 있어서 위처럼 3개의 (브라우저 접두사)코딩을 추가로 다 써주는게 완벽한 코딩임. */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grad">
+
+    </div>
+</body>
+
+</html>

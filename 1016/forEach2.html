@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var numbers = [1,2,3,4,5];
+        var sum = 0;
+        // for(var i =0; i < numbers.length; i++) {
+        //     document.write(numbers[i], "<br/>");
+        //     sum = sum + numbers[i];
+        // }
+        numbers.forEach(function(number){
+            sum += number;
+        });
+        document.write(sum);
+
+
+
+
+
+
+
+        // numbers.forEach(function(number){
+        //     document.write(number, "<br/>");
+        // })
+        // // 1. numbers라는 배열선언
+        // // 2. forEach 메서드 실행
+        // // 3. numbers 배열에 대해 순회 시작
+        // // 4. 각 요소에 대해 function(number)함수가 실행
+        // // 5. number 변수에 현재 순회중인 요소의 값이 저장(1,2,3,4,5)
+        // // forEach : var값의 방 만큼까지만 알아서 for문을 돌려준다.
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+*{margin: 0;padding:0;}
+#wrap{
+    width:1000px;
+    height:650px;
+}
+header{
+    width: 200px;
+    height:650px;
+    background-color: pink;
+    float:left;
+}
+#main{
+    width:800px;
+    height:650px;
+    background-color: hotpink;
+    float:left;
+}
+#main #img_slide{
+    width: 100%;
+    height:350px;
+    background-color: aqua;
+}
+section{
+    width: 100%;
+    height:200px;
+    background-color: yellow;
+}
+section article{
+    width:33.33%;
+    height:200px;
+    float: left;
+}
+section article.notice{background-color: tan;}
+section .banner{background-color: orange;}
+.icons{background-color: yellowgreen;}
+footer{
+    width:100%;
+    height:100px;
+    background-color: yellow;
+}
+footer .f_logo{
+    width:150px;
+    height:100px;
+    background-color: #999;
+}
+footer .f_menu{
+    width:650px;
+    height:50px;
+    background-color: #777;
+}
+footer .f_copy{
+    width:650px;
+    height:50px;
+    background-color: #555;
+}
+footer article{
+    float: left;
+}
+
+header .gnb{
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+.gnb li{
+    list-style: none;
+}
+.gnb > li{
+    /* float: right; */
+    overflow: left;
+    /*  ">" 자식선택자 .mainmenu 바로 아래 li */
+}
+.gnb li{background-color: yellow;}
+.gnb li a{
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px; 
+    color:#333;
+    text-align: center;
+    font-size: 20px;
+}
+
+.gnb li ul{
+    position: absolute;
+    display: none;
+}
+.gnb li:hover ul{
+    display: block;
+    /* 위 ul에 none처리 이후 아래 hover시 블럭처리하면 펼쳐지는 레이아웃 생성 됨. */
+}
+.gnb li a:hover{
+    background-color: #333;
+    color:#eee;
+}

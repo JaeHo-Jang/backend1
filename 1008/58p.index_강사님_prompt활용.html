@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //프롬프트를 활용해서 입력을 받을때는 아래처럼 추가코딩 (Number 또는 *parseInt* )
+        var price1 = Number(prompt("교통비?", "0"));
+        var price2 = Number(prompt("식비?", "0"));
+        var price3 = parseInt(prompt("음료비?", "0"));
+        // 프롬프트로 입력받으면 문자 3000이 되는데 Number, parseInt를 사용해서 숫자로 변환
+        // Number보다 parseInt를 쓰는 이유 : 숫자만 추출함 (ex. 소수점도 .이후로 삭제(16.6 -> 16) 및 px 등 제외 후 숫자만 추출하는 기능)
+
+        var total = price1 + price2 + price3;   // 전체합계
+        var result = total > 10000 ? total - 10000 + "초과" : "돈 관리 잘 했어요!";
+
+        document.write(result);
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

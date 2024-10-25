@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    #purple{
+        color: purple;
+    }
+    /* id는 #으로 부름 */
+    /* id가 선택자 우선순위 짱 제일 위 */
+    /* 이걸 무시한게 !important */
+    .red{
+        color: red;
+        }
+    h1{
+        color: blue !important;
+        }
+        /* 같은 h1의 중복의 경우 아래 마지막 코딩값이 먹음 -> 허나 위 red에 div h1{}으로 진행하게 되면 red코딩값이 먹음 = 즉 자세하게 쓴 것이 우선 */
+        /* !important  >  id선택자  >  구체적(부모div , 자식h1 으로 기술한 것  >  가장마지막에 기술한 것 */
+        /* 상수 선택자(태그)보다 별명(class)가 우선 */
+</style>
+
+<!-- @@@선택자 우선순위@@@ -->
+  <!-- 1. !important -->
+  <!-- 2. id 선택자 -->
+  <!-- 3. class 선택자 -->
+  <!-- 4. 태그 선택자 -->
+
+</head>
+<body>
+    <div>
+        <h1 class="red" id="purple">나는 빨간색</h1>
+        <!-- id는 유일한 선택자 해당 html파일에서 유일해야됨. 중복이 불가능함. 중복되면 나중에 난리남. -->
+         <!-- html태생 상 id가 먼저 탄생했고 이 문제를 해결하기위해 class가 나옴(중복 여러번 언제든 가능) -->
+          <!-- id선택자는 크게크게 구역을 나눌때, 전체적으로 구분을 나눌때 쓰이고 있다. -->
+        <h1>나는 파란색</h1>
+    </div>
+</body>
+</html>

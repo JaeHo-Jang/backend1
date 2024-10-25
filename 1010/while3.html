@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .blue{color: blue;}
+        .red{color: red;}
+    </style>
+
+    <script>
+        // while 반복문 -->> 실제로 거의 쓸일은 없지만. 자바에서 씀(스크립트아닌 자바에서)
+        var i = 20;
+        while( i >= 10) {
+            if( i % 2 ==0 ) {
+                document.write("<p class='blue'>" + i + "</p>");
+                // i를 변수처럼 쓰고 싶으면 양옆 "" 닫혀주고 + + 사이에 넣으면 됨.
+            } else{
+                document.write("<p class='red'>" + i + "</p>");
+            }
+            i--;   //  i 가 20부터 10까지 1씩 감소하면서 숫자를 각각 짝수(파랑), 홀수(빨강)
+        }
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

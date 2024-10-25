@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+    .container{
+        width: 600px;
+        border: 3px double #333;  /*solid는 선, dotted는 점선, double 이중선*/
+        margin: 10px auto;
+        padding: 20px;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="">
+            <fieldset>
+                <legend>사용자 정보</legend>
+                <ul>
+                    <li>
+                        <label for="uid">아이디</label>
+                        <input type="text" id="uid" placeholder="4~10자, 공백없이" required autofocus>
+                    </li>
+                    <li>
+                        <label for="uemail">이메일</label>
+                        <input type="email" id="uemail" required >
+                    </li>
+                    <li>
+                        <label for="pw1">비밀번호</label>
+                        <input type="password" id="pw1" placeholder="문자,숫자,특수 기호포함" required>
+                    </li>
+                    <li>
+                        <label for="pw2">비밀번호 확인</label>
+                        <input type="password" id="pw2" required >
+                    </li>
+                    <li>
+                        <label for="path">가입경로</label>
+                        <select id="path"> 
+                            <!-- 셀렉트는 항상 옵션문이다 아래 옵션태그 사용 -->
+                            <option value="blog">블로그</option>
+                            <option value="search" selected>검색</option>
+                            <option value="sns">SNS</option>
+                            <option value="etc">기타</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="memo">메모</label>
+                        <textarea name="" col="40" rows="4" id="memo"></textarea>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>이벤트와 새로운 소식</legend>
+                <input type="radio" name="mailing" id="mailing_y" value="mailing_yes">
+                <label for="mailing_y">메일수신</label>
+                <!-- 아이디를 쓰는 이유는 웹 접근성을 위해 → 레이블의 for와 id를 매칭(텍스트의 글씨를 같은 아이디로 지정해서 글씨를 클릭해도 체크가 되게끔하기위함)해서 벨류를 송출한다. -->
+                <input type="radio" name="mailing" id="mailing_n" value="mailing_no">
+                <label for="mailing_n">메일 수신 안함</label>
+            </fieldset>
+            <div class="buttons">
+                <input type="submit" value="가입하기">
+                <input type="reset" value="취소">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

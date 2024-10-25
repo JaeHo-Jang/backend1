@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        let  globalVar = "난 전역변수";
+        // golobalvar - 함수 외부에서 선언 된 전역변수, 함수 내/외부에 모두 접근가능.
+
+        function showVar() {
+            let localVar = "난 지역변수";
+            console.log(globalVar);
+            console.log(localVar);
+            // localVar - 함수 내부에서 선언된 지역 변수이므로, 함수 내부에서만 접근이 가능합니다.
+        }
+        
+        showVar();
+        console.log(globalVar);
+        // golobalvar - 함수 외부에서 선언 된 전역변수, 함수 내/외부에 모두 접근가능.
+
+        console.log(localVar);
+        // localVar - 함수 내부에서 선언된 지역 변수이므로, 함수 내부에서만 접근이 가능합니다.
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

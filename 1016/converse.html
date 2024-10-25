@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .bigbox {
+            width: 1440px;
+            height: 660px;
+            margin: 0 auto;
+        }
+
+        .bbox {
+            display: flex;
+            flex-wrap: wrap;
+            /* 지정된 크기에 맞춰서 배치(여러줄에 배치) */
+
+        }
+
+        .bigbox h2 {
+            margin: 30px 0 20px 20px;
+            font-size: 40px;
+        }
+
+        .box{
+            width: 480px;
+            height: 600px
+        }
+        
+        .box2{
+            position: relative;
+        }
+        .box2 p{
+            position: absolute;
+            text-align: center;
+            top: 180px;
+            left: 15%;
+        }
+        span{
+            display: inline-block;
+            font-weight: bold;
+            font-size: 45px;
+            margin: 20px 0;
+        }
+        .box2{
+            background-color: #ccc;
+        }
+
+        .btn{
+            width: 180px;
+            height: 50px;
+            display: inline-block;
+            font-size: 14px;
+            background-color: #333;
+            color: white;
+            line-height: 50px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="bigbox">
+        <h2>Featured Collections</h2>
+        <div class="bbox">
+            <div class="box box1">
+                <img src="converse/17273182880.jpg" alt="">
+            </div>
+            <div class="box box2">
+                <p>FOR MEN <br/>
+                    <span>Run star Trainer</span> <br/>
+                    컨버스 스타 쉐브론 라인의 새로운 실루엣 <br/>
+                    런스타 트레이너 <br/>
+                    <span class="btn">구매하기</span>
+                </p>
+
+            </div>
+            <div class="box box3">
+                <img src="converse/17273184620.jpg" alt="">
+            </div>
+            <div class="box box4">
+        </div>
+    </div>
+</body>
+
+</html>

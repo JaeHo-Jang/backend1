@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        header {
+            width: 1200px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: #ccc;
+        }
+
+        #img_slide {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #img_slide ul {
+            width: 4800px;
+            height: 300px;
+        }
+
+        #img_slide ul li {
+            width: 1200px;
+            float: left;
+        }
+
+        .prev {
+            position: absolute;
+            top: 45%;
+            left: 15px;
+        }
+
+        .next {
+            position: absolute;
+            top: 45%;
+            right: 15px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header></header>
+    <div id="img_slide">
+        <ul id="banner">
+            <li>
+                <a href="#">
+                    <img src="images/slide1.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/slide2.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/slide3.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="btn">
+            <a href="#" class="prev">
+                <img src="images/prev_btn.png" alt="이전 버튼">
+            </a>
+            <a href="#" class="next">
+                <img src="images/next_btn.png" alt="다음 버튼">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            var num = 0;
+            var li_w = 1200;
+
+            var copy1 = $('#banner li:lt(1)').clone();
+            // #banner li 중에 index번호가 3보다 작은(0,1,2) 것들을 복사하여 copy1변수에 대입
+
+            $('#banner').append(copy1);
+            // 복사한 li를 #banner 맨 뒤에 추가
+
+            $('.next').click(function () {
+                if (num == 3) {
+                    num = 0;
+                    $('#banner').css('margin-left', '0');
+                }
+                num++;
+                $('#banner').stop().animate({ 'margin-left': -li_w * num }, 500);
+                // animate 는 jquery에만 있는 기능 js에는 없다.
+                return false;
+            });
+
+
+            $('.prev').click(function () {
+                if (num == 0) {
+                    num = 3;
+                    $('#banner').css('margin-left', -li_w * num);
+                }
+                num--;
+                $('#banner').stop().animate({ 'margin-left': -li_w * num }, 500);
+                // animate 는 jquery에만 있는 기능 js에는 없다.
+                return false;
+            });
+
+            // 자동슬라이드
+            setInterval(autoplay, 1000);
+            function autoplay() {
+                if (num == 3) {
+                    num = 0;
+                    $('#banner').css('margin-left', '0');
+                }
+                num++;
+                $('#banner').stop().animate({ 'margin-left': -li_w * num }, 300);
+            };
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <script>
+
+        var a = 10;
+        var b = 20;  // 숫자20
+        var m = 30;
+        var n = 40;
+
+        var result;
+
+        result = a > b || b >= m || m > n;   //   ||는 or의 표시  머머중에 아무나, 몇개중에 하나만 참이면 참이다
+        document.write(result, "<br>");    // false, false, false   = false
+
+        result = a > b || b >= m || m <= n;
+        document.write(result, "<br>");   // false, false, true = true
+
+        result = a <= b && b >= m && m <= n;    //   &&는 그리고   =  다 참이면 참이다
+        document.write(result, "<br>");   // true, false, treu = false
+
+        result = a <= b && b <= m && m <= n;
+        document.write(result, "<br>");   // true,  true,  true = true
+
+        result = !(a > b);    //   !는 부정 =  a 는 b보다 크지 않다   = true
+        document.write(result, "<br>"); 
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

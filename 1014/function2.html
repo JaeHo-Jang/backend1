@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+       var color=["white", "yellow", "aqua", "purple"];
+       var i = 0;
+
+       function changeColor() {
+        i++;
+        if( i >= color.length){
+            i = 0;
+        }
+        console.log(i)  //콘솔을 if위에 두번 1,2,3,4로 가기 때문에 콘솔을 이프 문 아래에 두는것이 아름답다.
+
+        var bodyTag = document.getElementById("theBody");
+        bodyTag.style.backgroundColor = color[i];
+
+        //한줄로 코딩 가능 : document.getElementById("theBody").style.backgroundColor = color[i];
+       }
+
+    </script>
+
+
+</head>
+
+<body id = "theBody">
+    <button onclick = "changeColor();"> 배경색 바꾸기 </button>
+</body>
+
+</html>

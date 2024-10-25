@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Fluid Grid Layout</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		#wrapper {
+			width:96%;
+			margin:0 auto;
+			font-size:12px;
+		}
+        /* f 12 */
+		.header-text{
+			font-size:2em;
+			text-align:center;
+		}
+        /* f 12 x 2 = 24 */
+    .fluid-text {
+      font-size: 1.5em;
+    }
+    /* f 12 x 2 x 1.5 =36 */
+    /* 부모의 em을 따라가므로 주의해야함.
+    wrapper의 12px를 지정하였음에도 해더텍스트는 2em이나
+    fluid텍스트는 12px x 2em이 된 헤더텍스트의 24px를 따라 24 x 1.5 가 됨. */
+	</style>
+</head>
+
+<body>
+	<div id="wrapper">
+		<header class="header-text">
+      <p> 가변 그리드 레이아웃 </p>
+			<p class="fluid-text"> 가변 폰트 </p>
+		</header>
+	</div>
+</body>
+</html>

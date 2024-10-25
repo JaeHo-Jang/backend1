@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        a{
+            color: black;
+            text-align: center;
+        }
+        ul{
+            list-style: none;
+            width: 500px;
+            margin: 10px auto;
+            padding: 0;
+        }
+        li{
+            display: inline-block;
+            width: 120px;
+            border: 1px solid #cccc;
+            padding: 10px 15px;
+            font-size: 16px;
+            text-align: center;
+        }
+        #result{
+            width: 500px;
+            height: 300px;
+            margin: 30px auto;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+        }
+        p{
+            width: 80%;
+            padding: 10px;
+            line-height: 2em;
+        }
+    </style>
+
+    <script>
+        //color - 매개변수라고 부른다. - 매개변수는 아무렇게나 바꿔도 되는데 알아먹는게 좋지(ex.kkk)
+        function changeBg(color) {
+            var result = document.querySelector('#result');
+            result.style.backgroundColor = color;
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+    <ul>
+        <li><a href="#" onclick="changeBg('green')">Green</a></li>
+        <!--             ㄴ  changeBg라는걸 부를수 있도록 만들어 놓음. -->
+        <li><a href="#" onclick="changeBg('orange')">Orange</a></li>
+        <li><a href="#" onclick="changeBg('purple')">Purple</a></li>
+        <!-- green, orange, purple은 인수라고 얘기한다. -->
+         <!-- 위 인수들은 순서가 : 펑션의 changeBg(의 변수에 먼저 적재) 이후 아래 result~backcolor의 컬러 변수로 결과 변환 -->
+    </ul>
+    <div id="result"></div>
+</body>
+
+</html>

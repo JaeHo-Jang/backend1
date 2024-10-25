@@ -1,0 +1,280 @@
+*{margin: 0;padding: 0;}
+/* 별명 cf이유 : clearfix의 줄임말로 쓴거임 - 클리어픽스라고 디자이너들이 자주 씀. */
+.cf:after{
+  content: "";
+  display: block;
+  clear: both;
+}   /*이렇게 코딩하고 높이가 필요한 부분에 class="cf" 넣어주면 됨.*/
+/* cf는 클레스의 임의의별명이 아닌 고유 기능 값?? */
+.bigbox{
+  width:1000px;
+  border:5px solid tan;
+  margin: 0 auto; 
+  padding-bottom: 30px;
+}
+/* bigbox에 안주고 cf에 에프터 따로 준 이유? */
+
+
+.bigbox h2{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.bigbox .box{
+  float:left;
+  border: 5px solid lime;
+  margin-left: 32px;
+  margin-top: 30px;
+  width:200px;
+  height:150px;
+}
+
+.bigbox .box img{
+  display:block;
+  width:100%;
+}
+
+.abigbox{
+    width:1000px;
+    border:5px solid tan;
+    margin: 0 auto; 
+    padding-bottom: 30px;
+  }
+  /* bigbox에 안주고 cf에 에프터 따로 준 이유? */
+  
+  /* ======================================================= */
+
+  .abigbox h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .abigbox .abox{
+    float:left;
+    border: 5px solid lime;
+    margin-left: 32px;
+    margin-top: 30px;
+    width:200px;
+    height:150px;
+  }
+  
+  .abigbox .abox img{
+    display:block;
+    width:100%;
+  }
+
+.abox1{
+    overflow: hidden;
+    /* 박스가 넘어가는걸 보이지 말아라 -> 위 코딩 있고 없고 차이 확인 */
+}
+.abox1 img{
+    transform: scale(1);
+    transition: all 0.3s;
+}
+.abox1:hover img{
+    transform: scale(1.3);
+}
+
+.abox2{
+    overflow: hidden;
+    /* 박스가 넘어가는걸 보이지 말아라 -> 위 코딩 있고 없고 차이 확인 */
+}
+.abox2 {
+    transform: scale(1);
+    transition: all 0.3s;
+}
+.abox2:hover{
+    transform: scale(1.3);
+}
+
+.abox3{
+    overflow: hidden;
+    /* 박스가 넘어가는걸 보이지 말아라 -> 위 코딩 있고 없고 차이 확인 */
+}
+.abox3 img{
+    transform: scale(1,1); /*x축, y축 설정 - 기본값은 1이므로 생략도 가능*/
+    transition: all 0.3s;
+}
+.abox3:hover img{
+    transform: scale(1,1.5); /*x축, y축 설정*/
+}
+
+
+/* ======================================================= */
+
+.bbigbox{
+    width:1000px;
+    border:5px solid tan;
+    margin: 0 auto; 
+    padding-bottom: 30px;
+  }  
+  
+  .bbigbox h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .bbigbox .bbox{
+    float:left;
+    border: 5px solid lime;
+    margin-left: 32px;
+    margin-top: 30px;
+    width:200px;
+    height:150px;
+  }
+  .bbigbox .bbox img{
+    display:block;
+    width:100%;
+  }
+
+.bbox1 img{
+    transform: rotate(0deg);
+    transition: all 2s;
+}
+.bbox1:hover img{
+    transform: rotate(360deg);
+}
+
+.bbox2 img{
+    transform: rotateY(0deg);
+    transition: all 2s;
+}
+.bbox2:hover img{
+    transform: rotateY(360deg);
+}
+
+.bbox3 img{
+    transform-origin: left top;
+    transform: rotate(0deg);
+    transition: all 2s;
+}
+.bbox3:hover img{
+    transform: rotate(360deg);
+}
+
+.bbox4{
+    perspective: 200px;
+    /* 원근감 돌아가는 부모한테 주면 됨. 200~1000까지 적절히 */
+}
+.bbox4 img{
+    transform-origin: left top;
+    transform: rotateY(0deg);
+    transition: all 2s;
+}
+.bbox4:hover img{
+    transform: rotateY(360deg);
+}
+
+/* ======================================================= */
+.cbigbox{
+    width:1000px;
+    border:5px solid tan;
+    margin: 0 auto; 
+    padding-bottom: 30px;
+  }
+  .cbigbox h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .cbigbox .cbox{
+    float:left;
+    border: 5px solid lime;
+    margin-left: 32px;
+    margin-top: 30px;
+    width:200px;
+    height:150px;
+  }
+  .cbigbox .cbox img{
+    display:block;
+    width:100%;
+  }
+
+.cbox1{
+    position: relative;
+    overflow: hidden;
+}
+.cbox1 img{
+    position: absolute;
+    top: 150px;
+    left: 0;
+    transition: all 2s;
+}
+/* 부모에 relative주고 자식에 absolute를 주면 자식을 원하든 위치에 보낼 수 있음.(부모 영역내에서) */
+.cbox1:hover img{
+    top: 0;
+}
+
+.cbox2{
+    overflow: hidden;
+}
+.cbox2 img{
+    transform: translate(0, 150px); /*기준이 현재위치 기준으로 -> 내려옴. */
+    transition: all 2s;
+}
+.cbox2:hover img{
+    transform: translate(0,0);
+}
+
+.cbox3{
+    position: relative;
+    overflow: hidden;
+}
+.cbox3::before{
+    content: "Best 1 상품";
+    position: absolute;   /*absolute는 겹칠 수 있는 성질이 있음. 그래서 이미지와 겹쳐짐*/
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    bottom: -40px;
+    left: 0;
+    transition: all 1s;
+}
+.cbox3:hover::before{
+    bottom: 0px;
+}
+
+.cbox4{
+    position: relative;
+}
+.cbox4::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0,0,255,.5);
+    top: 0;
+    left: 0;
+    transition: all 1s;
+}
+.cbox4:hover::after{
+    width: 100%;
+}
+.cbox4 p{
+    position: absolute;
+    width: 100%;
+    /* height: 70%;
+    padding-top: 30%; */
+    height: 100%;
+    padding-top: 10%;
+    box-sizing: border-box;
+    /*위 높이, 페딩탑 합100으로 해도 되는데 박스사이징해서 위치조정하는게 더 깔끔함.*/
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    /* background-color: rgba(255,0,0,0.5); */
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* 위에 에프터를 비포로 지우면 상관없으나 z-인덱스로 우선순위 조정 */
+    background: url(../images2/more.png) no-repeat 50% 60%;
+    opacity: 0;
+    /* 불투명도 */
+    transition: all 1.1s;
+}
+.cbox4:hover p{
+    opacity: 1;
+}

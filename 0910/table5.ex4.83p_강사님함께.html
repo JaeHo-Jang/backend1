@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .cen{text-align:center;}
+    /* 중앙정렬 */
+    .th1{background-color: #999999;}
+    /* 포토샵 색상은 16진수를 쓴다. 0~9~a~f => 0은 검정 f는 흰색 */
+</style>
+</head>
+<body>
+    <table border="1">
+        <colgroup>
+            <col style="width:160px">
+            <col style="width:160px">
+            <col style="width:160px">
+            <col style="width:160px">
+        </colgroup>
+        <tr class="th1">
+            <th >방 이름</th>
+            <th >대상</th>
+            <th >크기</th>
+            <th >가격</th>
+        </tr>
+        <tr>
+            <td class="cen">유채방</td>
+            <td>여성 도미토리</td>
+            <td rowspan="3">4인실</td>
+            <td rowspan="4">1인 20,000원</td>
+        </tr>
+        <tr>
+            <td class="cen" rowspan="2">동백방</td>
+            <td>동성 도미토리</td>
+            
+            
+        </tr>
+        <tr>
+            
+            <td>가족 1팀</td>
+            
+
+        </tr>
+        <tr>
+            <td class="cen">천혜향방</td>
+            <td>-</td>
+            <td>2인실</td>
+            
+        </tr>
+        <tr>
+            <td class="cen th1" colspan="4">바깥채 전체를 렌트합니다</td>
+            <!-- 별명을 위처럼 두개를 줄 수 있다. -->
+            
+            
+            
+        </tr>
+        <!-- 위 클래스의 텍스트얼라인은 안쓰고 th로도 정리가 가능하다 * 첫 th코드 참고 -->
+    </table>
+</body>
+</html>

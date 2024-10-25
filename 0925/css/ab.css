@@ -1,0 +1,139 @@
+*{margin: 0; padding: 0;}
+.wrap{
+    width: 830px;
+    height: 310px;
+    position: relative;
+    border: 1px solid red;
+    margin: 100px auto 0;
+}
+.box{
+    /* width: 200px;
+    height: 150px; */
+    position: absolute;
+    /* display: none; */
+}
+.box img{
+    display: block;
+}
+.box1{
+    top: 0;
+    left: 0;
+}
+.box2{
+    top: 160px;
+    left: 0;
+}
+.box3{
+    top: 0px;
+    left: 210px;
+}
+.box4{
+    top: 0px;
+    left: 420px;
+}
+.box5{
+    top: 0;
+    right: 0;
+}
+.box6{
+    top: 160px;
+    right: 0;
+}
+.box1::after{
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    background-color: rgba(0,0,255,0.5);
+    
+}
+.box1:hover::after{
+    transition: all 0.4s;
+    width: 100%;
+    /* background-color: rgba(0,0,0,0.5); */
+}
+.box2::after{
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 255, 0.5);
+}
+.box2:hover::after{
+    transition: all 0.4s;
+    width: 100%;
+}
+.box3::after{
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 255, 0.5);
+}
+.box3:hover::after{
+    transition: all 0.4s;
+    width: 100%;
+}
+.box4::after{
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 255, 0.5);
+}
+.box4:hover::after{
+    transition: all 0.4s;
+    width: 100%;
+}
+.box5::after{
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 255, 0.5);
+}
+.box5:hover::after{
+    transition: all 0.4s;
+    width: 100%;
+}
+.box6::after{
+    content: '';
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 255, 0.5);
+}
+.box6:hover::after{
+    transition: all 0.4s;
+    height: 100%;
+}
+.box p{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 30px;
+    box-sizing: border-box;
+    /* border, padding 포함 100% 사이징 */
+    color: #fff;
+    text-align: center;
+    transition: all 0.4s;
+    opacity: 0;
+    background: url(../images2/more.png) no-repeat 50% 80%;
+}
+.box:hover p{
+    opacity: 1;
+}

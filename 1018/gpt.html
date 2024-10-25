@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과일 설명</title>
+    <style>
+        .description {
+            display: none; /* 기본적으로 설명 숨기기 */
+        }
+    </style>
+</head>
+<body>
+    <h1>과일 목록</h1>
+    <ul>
+        <li class="fruit" data-description="사과는 맛있고 건강한 과일입니다.">사과</li>
+        <li class="fruit" data-description="바나나는 에너지가 풍부한 과일입니다.">바나나</li>
+        <li class="fruit" data-description="배는 아삭아삭한 식감이 특징입니다.">배</li>
+    </ul>
+    <div id="fruit-description" class="description"></div>
+
+    <script>
+        // 모든 과일 요소 선택
+        const fruits = document.querySelectorAll('.fruit');
+        const descriptionDiv = document.getElementById('fruit-description');
+
+        // 각 과일에 클릭 이벤트 추가
+        fruits.forEach(function (fruit) {
+            fruit.addEventListener('click', function () {
+                // 선택된 과일의 설명 가져오기
+                const description = fruit.getAttribute('data-description');
+                
+                // 설명 div에 내용 업데이트
+                descriptionDiv.textContent = description;
+                
+                // 설명 표시
+                descriptionDiv.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>

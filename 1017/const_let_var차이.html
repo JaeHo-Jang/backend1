@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function constExample () {
+            // --------------var------------
+            // var y = 5;
+            // y = 10;   ==  재할당 가능
+            // var y = 20;  ==  재선언 가능
+            // --------------var------------
+
+
+            // --------------let------------
+            // let y = 5;
+            // y = 10 ;   ==  재할당 가능
+            // let y = 20;   == 재선언 불가
+            // --------------let------------
+
+
+            // --------------const------------
+            const y = 10;
+            // y = 20; == 재할당 불가능
+            // const y = 20; ==  재선언 불가능.
+
+            const obj = {name : "민희"};
+            obj.name = "예슬";    // 객체의 속성은 변경가능
+            document.write(obj);
+
+            const arr = [1, 2, 3];
+            arr.push(4);    //  배열의 요소는 변경 가능    - 숫자 4를 맨뒤에 추가해라
+            document.write(arr);    // 출력 : [1, 2, 3, 4]
+            // --------------const------------
+
+
+            document.write(y, "<br/>");
+
+        }
+        constExample ();
+
+
+
+        // *** var은 함수스코프 이므로, 함수(내에서만) 전체의 영향을 받아 선언된다.
+        // *** var은 제외한 const, let은 중괄호안 영역의 영향을 받는다.
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

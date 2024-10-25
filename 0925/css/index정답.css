@@ -1,0 +1,160 @@
+*{margin:0;padding:0;}
+
+.cf:after{
+	clear:both;
+	content:"";
+	display:block;
+}
+
+ul,li{list-style:none;}
+
+#wrap{
+	width:100%;
+	height:auto;
+	background-color:#f4f4f4;
+}
+
+section{
+	width:1070px;
+	height:1020px;
+	margin:0 auto;
+}
+section h2{
+	padding:60px 0 30px 0;
+	font-weight:normal;
+	/*글자의 굵기*/
+}
+#content{
+	width:1070px;
+	height:900px;
+	position:relative;
+	border:1px solid red;
+}
+#content div a{
+	display:block;
+	width:100%;
+	height:100%;
+	position:relative;
+}
+#content div a:before{
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:0%;
+	background-color:rgba(4,69,244,0.85);
+	transition:all 0.2s;
+}
+
+#content div{display:none;}
+
+#content .img1{
+	display:block;
+	position:absolute;
+	top:0;left:0;
+	width:260px;
+	height:260px;
+}
+
+#content div a p{
+	position:absolute;
+	width:100%;
+	top:80px;
+	color:#fff;
+	font-size:13px;
+	background-image:url(../img/more.png);
+	background-repeat:no-repeat;
+	background-position:50% 100%;
+	padding-bottom:50px;
+	transition:all 0.5s;
+	text-align:center;
+	opacity:0;
+}
+#content div a:hover p{
+	opacity:1;
+}
+#content div a:hover:before{
+	width:100%;
+}
+
+#content .img2{
+	display:block;
+	position:absolute;
+	top:0;left:270px;
+	width:260px;
+	height:530px;
+}
+#content .img2 a p{
+	top:40%;
+}
+#content .img3{
+	display:block;
+	position:absolute;
+	top:0;left:540px;
+	width:260px;
+	height:260px;
+}
+
+#content .img4{
+	display:block;
+	position:absolute;
+	top:0;left:810px;
+	width:260px;
+	height:260px;
+}
+
+#content .img5{
+	display:block;
+	position:absolute;
+	top:270px;left:0px;
+	width:260px;
+	height:260px;
+}
+
+#content .img6{
+	display:block;
+	position:absolute;
+	top:270px;left:540px;
+	width:530px;
+	height:260px;
+}
+
+#content .img8{
+	display:block;
+	position:absolute;
+	top:540px;left:270px;
+	width:530px;
+	height:260px;
+}
+#content div.img6 a:before,
+#content div.img8 a:before{
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	height:0;
+	width:100%;
+	background-color:rgba(4,69,244,0.85);
+	transition:all 0.2s;
+}
+#content div.img6 a:hover:before,
+#content div.img8 a:hover:before{
+	height:100%;
+}
+#content .img7{
+position:absolute;
+top:540px;
+left:0px;
+display:block;
+width:260px;
+height:260px;}
+#content .img9{
+	display:block;
+	position:absolute;
+	top:540px;
+	left:810px;
+
+width:260px;
+height:260px;
+}

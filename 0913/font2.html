@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /* 영어 open sans 체를 찾아서 300, 400, 700 굵기를 활용하시오. */
+
+    @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Nanum+Gothic:wght@400;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+    p{font-size: 35px;}
+
+    .font1{
+        font-family: "Open Sans", sans-serif; /* 해당 코딩은 p 공통사항으로 p스타일에 한줄로 통일 가능 함.*/
+        font-weight: 300;
+    }
+    .font2{
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+    }
+    .font3{
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+    }
+    .font4{
+        font-family: "Henny Penny", system-ui;
+        font-weight: 400; /*400이 기본 굵기임.*/
+    }
+    .font5{
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif;
+        font-style: italic; /*em태그처럼 기울임.*/
+    }
+
+</style>
+
+
+<body>
+    <p>Please take me to the market.</p>
+    <p class="font1">Please take me to the market.</p>
+    <p class="font2">Please take me to the market.</p>
+    <p class="font3">Please take me to the market.</p>
+    <p class="font5">Please take me to the market.</p>
+    <p class="font4">Please take me to the market.</p>
+</body>
+</html>

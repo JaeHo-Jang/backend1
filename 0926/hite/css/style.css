@@ -1,0 +1,162 @@
+*{margin: 0; padding: 0;}
+.cf::after{
+    clear: both;
+    display: block;
+    content: "";
+}
+ul,li{
+    list-style: none;
+}
+#wrap{
+    width: 100%;
+    height: auto;
+    background-color: #f4f4f4;
+}
+section{
+    width: 1070px;
+    height: 1020px;
+    margin: 0 auto;
+    /* border: 1px solid blue; */
+}
+section h1{
+    padding: 60px 0 30px 0;
+    font-weight: normal;
+}
+#content{
+    width: 1070px;
+    height: 900px;
+    position: relative;
+    border: 1px solid red;
+}   
+
+#content div{
+    position: absolute;
+    display: none;
+}
+
+#content div a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#content div a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(4,69,244,0.85);
+    transition: all 0.3s;
+}
+#content div a:hover::before{
+    width: 100%;
+}
+
+/*6번 8번 그림*/
+#content div.img6 a::before,
+#content div.img8 a::before{
+    width: 100%;
+    height: 0%;
+}
+#content div.img6 a:hover::before,
+#content div.img8 a:hover::before{
+    height: 100%;
+}
+/* 6번 8번 그림만 따로 */
+
+
+
+
+#content div a p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    top: 30%; /*px, 퍼센트 다 가능*/
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    padding-bottom: 50px; /*more사진을 넣기위해 여백을 준것임.*/
+    background:url(../img/more.png) no-repeat 50% 100%;
+    /* background-color: rgba(255,0,0,0.5); */
+    transition: all 0.5s;
+}
+#content div a:hover p{
+    opacity: 1;
+}
+
+
+#content div.img1{
+    display: block;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 260px;
+}
+#content div.img2{
+    display: block;
+    /* 인라인 요소를 블럭요소로 바꾸는것도 있지만 위에처럼 디스플레이 논으로 안보이게 한걸 보이게 하는 기능도 있음. */
+    /* 따라서 정렬을 위해 일단 위에서 다 지워놓고 하나씩 block으로 보이게 하면서 작업하는 것임. */
+    top: 0;
+    left: 270px;
+    width: 260px;
+    height: 530px;
+}
+#content div.img2 a p{
+    top: 40%;
+}
+#content div.img3{
+    display: block;
+    top: 0;
+    left: 540px;
+    width: 260px;
+    height: 260px;
+}
+#content div.img4{
+    display: block;
+    top: 0;
+    right: 0px;
+    width: 260px;
+    height: 260px;
+}
+#content div.img5{
+    display: block;
+    top: 270px;
+    left: 0px;
+    width: 260px;
+    height: 260px;
+}
+#content div.img6{
+    display: block;
+    top: 270px;
+    left: 540px;
+    width: 530px;
+    height: 260px;
+}
+#content div.img7{
+    display: block;
+    top: 540px;
+    left: 0px;
+    width: 260px;
+    height: 260px;
+}
+#content div.img8{
+    display: block;
+    top: 540px;
+    left: 270px;
+    width: 530px;
+    height: 260px;
+}
+#content div.img9{
+    display: block;
+    top: 540px;
+    right: 0px;
+    width: 260px;
+    height: 260px;
+}
+
+

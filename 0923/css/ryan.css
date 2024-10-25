@@ -1,0 +1,107 @@
+*{margin: 0; padding: 0;}
+.bigbox{
+    width: 500px;
+    height: 500px;
+    position: relative; /*다른 동그라미의 기준이 되기 위해 적음.*/
+    border: 1px solid #333;
+    margin: 100px auto 0;
+}
+.ear{
+    width: 150px;
+    height: 150px;
+    border: 10px solid #333;
+    background-color: #d59729;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+}
+.ear.left{
+    left: 40px;
+}
+.ear.right{
+    right: 40px;
+}
+.face{
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #d59729;
+    bottom: 0;
+    border: 10px solid #333;
+    box-sizing: border-box; /*선두께 포함하여 리사이징(선이 안쪽으로 파고들어0 내장비만 만듦)*/
+    /* 원래는 500에 선 20해서 520이여야 되는데 박스사이징을 통해 선포함하여 500으로 바뀜 */
+}
+.eyebrow{
+    width: 100px;
+    height: 20px;
+    border: 1px solid #333;
+    border-radius: 7px;
+    background-color: #000;
+    position: absolute;
+    top: 120px;
+}
+.eyebrow.left{
+    left: 100px;
+}
+.eyebrow.right{
+    right: 100px;
+}
+.eyeball{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 180px;
+}
+.eyeball.left{
+    left:135px
+}
+.eyeball.right{
+    right: 135px;
+}
+.nose{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    margin-left: -20px;
+    /* 좌우 중앙정렬 50%이후 넓의 40의 절반인 -20으로 가운데 위치 */
+    z-index: 2;
+}
+.mouth{
+    width: 80px;
+    height: 74px;
+    border: 10px solid #000;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 240px;
+}
+.mouth.left{
+    left: 175px;
+}
+.mouth.right{
+    right: 175px;
+}
+.mouth_cover{
+    width: 37px;
+    height: 40px;
+    position: absolute;
+    background-color: white;
+    top: 2px;
+    transform: rotate(45deg); /*45도 회전*/
+}
+.mouth_cover.left{
+    left: 42px;
+}
+.mouth_cover.right{
+    right: 42px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        //객체 생성하기
+        let person = {
+            name : "홍길동",
+            age : 30
+        }
+        document.write(person.name, "<br/>");
+        document.write(person.age, "<br/>");
+
+        let personJson = JSON.stringify(person);
+        // json 형식의 파일로 객체리터럴을 변환
+        console.log(personJson);
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

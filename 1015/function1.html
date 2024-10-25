@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #galleryZone {
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="galleryZone">
+        <p><img src="images/pic_1.jpg" id="photo" alt=""></p>
+        <p class="buttons">
+            <button onclick="gallery(0)">이전</button>
+            <button onclick="gallery(1)">다음</button>
+        </p>
+    </div>
+
+    <script>
+
+        var num = 1;
+
+        function gallery(direct) {
+            if(direct) { // if문 괄호안에 1번이 오면 참, 0을 거짓
+                if(num == 8) return;  // num이 8이면 빠져나감(동작을 안함)
+                num++;
+            } else {
+                if(num == 0) return;
+                num--;
+            }
+            console.log(num);
+            var imgTag = document.getElementById('photo');
+
+            // var img1 = imgTag.getAttribute('src');
+            // src, id, class, alt 등 "="으로 되어있는건 다 불러올 수 있다. = get 불러온다
+
+            // console.log(img1)
+
+            imgTag.setAttribute('src', "images/pic_" + num + ".jpg");
+            // src 를 뒤 내용으로 변경해라 = set 변경해라
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+    .container div{
+        /* width: 100%; */
+        width: 100vw;
+        /* 모바일 시장에서 나온 신개념 vw 가로 */
+
+        /* height: 100%; */
+        /* 높이 100프로라는 개념은 없다. */
+        height: 100vh;
+        /* 모바일 시장에서 나온 신개념 vh 세로*/
+    }
+    .b1{
+        background-color: aqua;
+        background-image: url(images/back1.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-attachment: fixed; /*스크롤은 움직이는데 이미지는 고정!*/
+    }
+    .b2{
+        background-color: rgb(56, 146, 93);
+        background-image: url(images/back2.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-attachment: fixed; /*스크롤은 움직이는데 이미지는 고정!*/
+    }
+    .b3{
+        background-color: rgb(141, 57, 180);
+        background-image: url(images/back3.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-attachment: fixed; /*스크롤은 움직이는데 이미지는 고정!*/
+    }
+    .b4{
+        background-color: rgb(209, 199, 54);
+        background-image: url(images/back4.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-attachment: fixed; /*스크롤은 움직이는데 이미지는 고정!*/
+    }
+    .b5{
+        background-color: rgb(0, 255, 76);
+        background: url(images/back5.jpg) fixed no-repeat 50% 50% / cover; 
+          /*css3.1부터 변경되었다 : 픽스드 노리피트가 어느 위치에나 바꿔도 되었었는데, 지금은 픽스드랑 노리피트 두자리만 서로 교차가 가능하고 그대로 써야됨.*/
+         /*백그라운드 포지션과 백그라운드 사이즈는 둘다 숫자로 표시할 수 있기 때문에 구분을 하기 위해 /로 구분하기 위해 쓴다*/
+        /* 위 b1~b4까지 여러줄로 했던것을 이렇게 한줄로 가능함 css코딩은 백그라운드 이미지가 아닌 "백그라운드"만 */
+    }
+
+
+</style>
+
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="b1">배경1</div>
+        <div class="b2">배경2</div>
+        <div class="b3">배경3</div>
+        <div class="b4">배경4</div>
+        <div class="b5">배경5</div>
+    </div>
+
+</body>
+</html>

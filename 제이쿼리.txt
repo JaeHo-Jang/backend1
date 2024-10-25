@@ -1,0 +1,16 @@
+1. 다운로드 방식
+제이쿼리 홈페이지가서 다른이름으로 저장해서 script src 로 파일 직접 지정
+
+
+2. 네트워크 방식
+직접
+<script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+선언
+
+
+---jquery ui----- 치면
+홈페이지 및 소스보기로 복붙 가능
+
+
+
+

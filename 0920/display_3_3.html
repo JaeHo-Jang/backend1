@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        nav{
+
+        }
+        nav ul{
+            list-style-type: none;  /*블릿 제거*/
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+        nav ul li{
+            float: left;
+            /* display: inline-block; */
+            width: 200px;
+            height: 50px;
+            background-color: blueviolet;
+            text-align: center; /*가로 가운데 정렬*/
+            line-height: 50px; /* 높이 50, 줄간격 50 같으면 세로 중앙정렬 된다.*/
+        }
+
+        nav ul li a{
+            color: white;
+            text-decoration: none; /*하이퍼링크 밑줄 제거*/
+        }
+        /* li에 커서를 줫을때 a색깔이 바뀌게끔 하기 위해서는 아래 처럼 코딩 두개를 써야됨 */
+        /* ㄴ 하지만 추후에 li의 크기와 a의 크기를 똑같게 하면 한줄로 같은 효과를 줄수있을 것 */
+        nav ul li:hover{
+            background-color: aqua;
+        }
+        nav ul li:hover a{
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 네비게이션 태그는 시멘틱태그 -> html 5 에서 새로 나옴. -->
+    <nav>
+        <ul>
+            <li><a href="#">애완견 종류</a></li>
+            <li><a href="#">입양하기</a></li>
+            <li><a href="#">건강돌보기</a></li>
+            <li><a href="#">더불어살기</a></li>
+        </ul>
+    </nav>
+    <div class="img1">
+        <img src="images/pic1.jpg" alt="">
+        <img src="images/pic2.jpg" alt="">
+        <img src="images/pic3.jpg" alt="">
+    </div>
+</body>
+
+</html>

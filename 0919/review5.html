@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #333;
+        }
+        .box1{
+            background-color: aqua;
+            margin-left: 30px;
+            /* 바깥여백 왼쪽 30 */
+        }
+        .box2{
+            background-color: blueviolet;
+            margin: 10px 20px;
+            /* 바깥여백 위아래 10, 좌우20 */
+        }
+        .box3{
+            background-color: burlywood;
+            /* margin-left: auto;
+            margin-right: auto; 넓이가 있는 요소에만 가능하다, 높이는 불가 */
+            margin: 0 auto;
+            /* 바깥여백 위아래 0, 좌우 오토 : 레프트 라이트 두줄 쓸필요 없다 */
+            text-align: center;
+        }
+        .box4{
+            background-color: chartreuse;
+            margin: 10px auto 20px; /*좀 특이해 - 번외 - 위 10 좌우 오토, 아래 20임.*/
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <!-- .명칭 엔터는 div class + 명칭 까지의 태그를 자동완성 - div(디비전은) 구역을 나눌 때 쓴다. -->
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+
+</body>
+
+</html>

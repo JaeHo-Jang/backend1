@@ -1,0 +1,650 @@
+*{margin:0; padding:0;}
+a{text-decoration:none; color:#333;}
+ul,li{list-style:none;}
+.cf::after{
+    content:'';
+    display:block;
+    clear:both;
+ }
+
+ /* 처음선언시 반응형 만들때 아래 선언은 필수!! */
+ body{
+    overflow-x:hidden;
+ }
+/* ============================헤더================================== */
+
+
+header{ 
+    width: 100%;
+    height: 165px;
+    border-top: 5px solid #009223;
+    position: relative;
+    z-index: 10;
+}
+#h_top{
+    width: 1200px;
+    height: 90px;
+    margin: 0 auto; /*중앙정렬*/
+}
+#h_top > a{
+    position: absolute;
+    /* margin: 0 atuo; 중앙정렬 할 수 없음. */
+    width: 202px;
+    height: 40px;
+    /* border: 1px solid red; */
+    left: 50%;
+    transform: translate(-50%, 0);
+    /* 포지션이 앱솔 또는 릴레이티브인것은 위처럼 레프트주고 트렌스레이트로 중앙정렬 */
+    top: 25px;
+}
+#h_top > a img{
+    display: block;
+    width: 100%;
+}
+
+#h_top ul{
+    /* position: absolute;
+    right: 0;
+    top: 30px; */
+    /* header가 relative이므로 안됨. */
+    float: right;
+    margin-top: 30px;
+    /* h_top을 기준으로 오른쪽 정렬(배치) */
+}
+#h_top ul li{
+    float: left;
+    margin-left: 15px;
+}
+#h_top ul li a{
+    display: block;
+    height: 20px;
+    padding: 5px 13px;
+}
+#h_top ul li a.earth{
+    width: 32.5px;
+    text-indent: -9999px;
+    /* 내어쓰기 - 글자를 숨길 수 있다. */
+    padding: 5px 0;
+    background: url(../img/icon_global_subway.png) no-repeat center;
+}
+
+/* ============================메뉴들================================== */
+nav{
+    width: 100%;
+    height: 75px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+nav > ul{
+    width: 1200px;
+    /* 중앙정렬을 해야하므로 넓이를 지정한다. */
+    height: 75px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 100px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 15;
+}
+nav > ul > li{
+    float: left;
+}
+nav > ul > li > a{
+    /* 대표메뉴 a */
+    display: block;
+    width: 200px;
+    height: 75px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 75px;
+}
+nav ul ul a{
+    font-size: 15px;
+    color: #666;
+    padding: 8px 0 9px;
+    display: block;
+    letter-spacing: -0.05; /*글자간격*/
+    font-weight: bold;
+}
+nav ul li ul li{
+    width: 200px;
+}
+nav ul li ul{
+    position: absolute;
+    top: 75px;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    /* 0이상이면 숨겨라 - 하위메뉴가 안보임 */
+    transition: all 0.5s;
+    padding-top: 20px;
+}
+nav ul:hover li ul{
+    height: 240px;
+}
+
+.shadow{
+    position: absolute;
+    left: 0;
+    top: 165px;
+    /* header가 relative이므로 위에서부터 165 떨어진 곳에 .shadow가 펼쳐져야 함. */
+    width: 100%;
+    background-color: #fff;
+    height: 0px;
+    transition: all 0.5s;
+}
+/* nav > ul과 shaodw가 형제
+둘다 position을 가지고 있다.
+shadow가 nav>ul보다 나중에 만들어졌으므로 ul메뉴가 안보이는 것.
+해결책 : nav>ul에 z-index값을 준다. */
+nav ul:hover + .shadow{
+    height: 250px;
+}
+
+
+
+
+/* =============================배너이미지(슬라이드)================================= */
+section{
+    width: 100%;
+    position: relative;
+}
+.slide{
+    height: 440px;
+    width: 100%;
+    position: relative;
+}
+.slide .sg{
+    width: 1920px;
+    height: 440px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slide .sg a{
+    width: 1920px;
+    height: 440px;
+    position: absolute;
+    left: 0;
+}
+.slide .sg a.i_01{
+    /* 같은 꺽쇠<> 범위에 있는 경우에는 같은존재이므로 붙여써야한다. ex) a.i_01 처럼 */
+    background: url(../img/00_써브웨이_main_02_20200427112753722.jpg) no-repeat center;
+}
+.slide .sg a.i_02{
+    left: 100%;
+    background: url(../img/main_pc_1920x440_20200427112254027.jpg) no-repeat center;
+}
+.slide .sg a.i_03{
+    left: 200%;
+    background: url(../img/main_pc_1920x440_20200528061058713.jpg) no-repeat center;
+}
+.slide .sg a.i_04{
+    left: 300%;
+    background: url(../img/main_pc_1920x440_20200529050816305.jpg) no-repeat center;
+}
+
+/* ===========================슬라이드 하단 dot=========================== */
+.slide .dot{
+    position: absolute;
+    right: 25%;
+    bottom: 40px;
+    width: 100px;
+    height: 10px;
+
+}
+.slide .dot a{
+    display: block;
+    float: left;
+    text-indent: -9999px;
+    margin: 0 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 30px;
+}
+.slide .dot a.on{
+    background-color: #ffc300;
+    width: 30px;
+}
+#sub{
+    width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+    position: relative;
+    /* border: 1px solid #333; */
+}
+#sub .sub_wrap{
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+#sub .sub_wrap a{
+    display: block;
+    width: 300px;
+    height: 80px;
+    float: left;
+    font-size: 22px;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-top: 20px;
+    /* border: 1px solid #333; */
+}
+.sw_left{
+    padding-left: 130px;
+    background: #ffce32 url(../img/icon_map.png) no-repeat 35% 50%;
+    border-radius: 30px 0px 0px 0px; /*왼쪽상단부터 시계방향*/
+    color: #292929;
+}
+.sw_right{
+    padding-left: 95px;
+    background: #009223 url(../img/icon_franchise.png) no-repeat 20% 50%;
+    border-radius: 0px 0px 30px 0px; /*왼쪽상단부터 시계방향*/
+    color: #fff;
+}
+
+
+
+/* ===========================서브웨이 메뉴=========================== */
+
+.section2{
+    width: 100%;
+}
+.s02_wrap{
+    width: 1200px;
+    height: 560px;
+    margin: 0 auto;
+    padding-top: 60px;
+    position: relative;
+}
+
+/* 탭메뉴 */
+.menu_top{
+    width: 1200px;
+    height: 77px;
+    background: url(../img/bul_tit.png) no-repeat 0 50%;
+}
+
+.menu_top h3{
+    height: 77px;
+    padding: 12px 0 0 25px;
+    font-size: 40px;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+}
+.menu_top .mt_right{
+    float: right;
+    margin-top: 30px;
+}
+.menu_top .mt_right li{
+    float: left;
+    padding-right: 25px;
+    margin-right: 23px;
+    position: relative;
+}
+
+.menu_top .mt_right li.on a{
+    color: #009223;
+}
+.menu_top .mt_right li::after{
+    content: "";
+    width: 1px;
+    height: 15px;
+    background-color: #bbb;
+    position: absolute;
+    right: 0;
+    top: 3px;
+}
+.menu_top .mt_right li:nth-child(4)::after{
+    display: none;
+}
+.menu_top .mt_right li a{
+    display: block;
+    font-size: 16px;
+    color: #666;
+    font-weight: bold;
+}
+
+.menu_wrap .menu{
+    width: 1200px;
+    height: 320px;
+    margin-top:33px;
+    overflow: hidden;
+    padding-left: 30px;
+}
+.menu ul li{
+    width: 260px;
+    height: 320px;
+    float: left;
+    padding: 0 5px;
+    text-align: center;
+    margin-right: 30px;
+    position: relative;
+}
+.menu ul li::after{
+    content: "";
+    width: 98px;
+    height: 98px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url(../img/btn_more.png) no-repeat 0 0;
+    margin: -22px 0 0 -22px;
+    opacity: 0;
+}
+.menu ul li:hover::after{
+    opacity: 1;
+}
+
+.menu ul li:nth-child(1){
+    /* margin-left: 0; */
+}
+.menu ul li img{
+    width: 100%;
+    height: 182px;
+}
+.menu ul li p{
+    font-size: 13px;
+    color: #999;
+    letter-spacing: -0.04em;
+}
+.menu ul li strong{
+    display: block;
+    margin:  2px 0 10px;
+    text-align: center;
+}
+.menu ul li:hover{
+    /* width: 350px;
+    margin-right: 0; */
+    /* 실 홈페이지처럼 안되서 자바로 해야됨. */
+}
+.menu ul li:hover img{
+    width: 350px;
+    height: 238px;
+}
+.menu ul li:hover strong{
+    font-size: 22px;
+    margin-top: -10px;
+
+}
+.menu ul li:hover p{
+    opacity: 0;
+}
+
+/* ===========================메뉴 이동 화살표=========================== */
+.s02_wrap a.prev{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -150px;
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid #333; */
+    text-indent: -9999px;
+    background: url(../img/icon_event_slider_arr.png) no-repeat 0 0;
+}
+.s02_wrap a.prev:hover{
+    /* background: url(../img/icon_event_slider_arr.png) no-repeat 0 -50px;  아래처럼 줄일 수 있음.*/
+    background-position: 0 -50px;
+}
+
+.s02_wrap a.next{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -150px;
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid #333; */
+    text-indent: -9999px;
+    background: url(../img/icon_event_slider_arr.png) no-repeat -50px 0;
+}
+.s02_wrap a.next:hover{
+    /* background: url(../img/icon_event_slider_arr.png) no-repeat 0 -50px;  아래처럼 줄일 수 있음.*/
+    background-position: -50px -50px;
+}
+
+
+/* ===========================메뉴 하단 서브배너=========================== */
+#section3{
+    width: 100%;
+    height: 790px;
+    background: url(../img/bg_content.gif) repeat 0 0;
+}
+.s03_wrap{
+    width: 1300px;
+    height: 790px;
+    margin: 0 auto;
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+.content{
+    width: 100%;
+    height: 300px;
+}
+.cont_01{
+    float: left;
+    width: 400px;
+    height: 100%;
+    background: url(../img/bg_utilization.png) no-repeat 0 0;
+    margin-left: 55px;
+    position: relative;
+}
+.cont_02{
+    float: right;
+    width: 825px;
+    height: 100%;
+    background: url(../img/img_subway_history.png) no-repeat 0 0;
+    position: relative;
+}
+.con_top h3{
+    height: 80px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 40px;
+    letter-spacing: -0.03em;
+}
+.cont_01 h3{
+    position: absolute;
+    left: 39px;
+    top: 38px;
+}
+.cont_02 h3{
+    position: absolute;
+    left: 410px;
+    top: 38px;
+}
+
+.con_top a{
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 8px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.cont_01 a{
+    position: absolute;
+    left: 41px;
+    bottom: 42px;
+}
+.cont_02 a{
+    position: absolute;
+    left: 410px;
+    bottom: 42px;
+}
+/* ===========================메뉴 하단 서브배너 밑 서브배너=========================== */
+
+.con_bott{
+    margin-top: 30px;
+}
+.cont_03{
+    float: left;
+    width: 870px;
+    height: 100%;
+    background-color: #fff;
+    margin-left: 55px;
+    position: relative;
+    border-radius: 30px 0 30px 0 ;
+}
+.cont_03 .new{
+    float: left;
+    margin-top: 75px;
+    margin-left: 60px;
+}
+.cont_03 .new p{
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+.cont_03 ul{
+    float: left;
+    margin-top: 76px;
+    margin-left: 100px;
+}
+.cont_03 ul li a{
+    display: inline-block;
+    font-size: 16px;
+    color: #292929;
+    letter-spacing: -0.04em;
+    margin-top: 21px;
+    font-weight: bold;
+}
+.cont_03 ul li:nth-child(1) a{
+    margin-top: 0;
+}
+.cont_03 ul li a:hover{
+    color: #009223;
+    text-decoration: underline;
+}
+.cont_03 ul li.more a{
+    color: #999;
+    font-size: 15px;
+    padding: 33px 0 8px;
+    margin-top: 0;
+    text-decoration: none;
+}
+
+
+
+.cont_04{
+    float: left;
+    width: 270px;
+    height: 100%;
+    margin-left: 45px;
+    background: url('../img/270X300\ \(1\)_20230829025721267.jpg');
+    /* 사진파일 등 url입력시 띄어쓰기나 (숫자)이럴 경우 경로닫힘으로 이해하는 경우가 있음.
+    이럴경우에는 하나의 파일이다 라고 한줄에 ''표시를 해주면 하나의 파일로 인식 */
+    position: relative;
+    border-radius: 0 30px 0 30px;
+}
+
+.new h2{
+    font-size: 30px;
+    padding: 17px 0 0 25px;
+    height: 60px;
+    background: url(../img/bul_tit.png) no-repeat 0 0;
+}
+
+
+/* ===========================제일 밑 퀵 메뉴=========================== */
+.quick_menu ul{
+    width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+    padding: 40px 0;
+    display: flex;
+    border: 1px solid #333;
+    justify-content: space-around;
+}
+/* .quick_menu .qm01 + .qm02 + .qm03 + .qm04{
+    justify-content: center;
+} */
+/* .quick_menu ul a{
+    display: block;
+    padding: 0 70px;
+} */
+.qm01 a::before{
+    display: block;
+    content: "";
+    width: 70px;
+    height: 70px;
+    background: url(../img/icon_quickmenu.png) no-repeat 0 0;
+}
+.qm02 a::before{
+    display: block;
+    content: "";
+    width: 70px;
+    height: 70px;
+    background: url(../img/icon_quickmenu.png) no-repeat -70px 0;
+}
+.qm03 a::before{
+    display: block;
+    content: "";
+    width: 70px;
+    height: 70px;
+    background: url(../img/icon_quickmenu.png) no-repeat -140px 0;
+}
+.qm04 a::before{
+    display: block;
+    content: "";
+    width: 70px;
+    height: 70px;
+    background: url(../img/icon_quickmenu.png) no-repeat -210px 0;
+}
+/* .qm01{
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.qm02{
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.qm03{
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.qm04{
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+} */
+
+
+
+
+/* ===========================푸터=========================== */
+#footer{background-color:#292929; color:#666666; padding:22px 0; position:relative; z-index:9}
+#footer:after{content:''; position:absolute; left:0; top:59px; width:100%; height:1px; background-color:#3b3b3b}
+#footer .content .util_menu{margin-bottom:25px;}
+#footer .content .util_menu ul{overflow:hidden;}
+#footer .content .util_menu ul li{float:left; margin-right:29px;}
+#footer .content .util_menu ul li a{color:#666666; display:block; font-size:14px; letter-spacing:-0.05em}
+#footer .content .util_menu ul li a strong{color:#bbbbbb}
+#footer .content .util_menu ul li a.eng{letter-spacing:0.05em}
+#footer .content span{position:relative; display:inline-block; margin-top:19px; font-size:13px; padding-left:9px; margin-left:3px; letter-spacing:-0.01em}
+#footer .content span:after{content:''; position:absolute; left:0; top:5px; width:2px; height:10px; background-color:#666666}
+#footer .content span.addr{padding-left:0; margin-left:0}
+#footer .content span.addr:after{display:none;}
+#footer .content .copyright{font-family:font_sw; font-size:13px; line-height:25px; padding-top:2px; letter-spacing:0.005em}
+#footer .content .sns_area {position:absolute; right:40px; bottom:3px; overflow:hidden; text-indent:-9999px; font-size:0; line-height:0; width:50px; height:50px;}
+#footer .content .sns_area:after{content:''; width:50px; height:50px; display:block; opacity:0; transition-duration:0.3s;}
+#footer .content .sns_area:hover:after{opacity:1}
+#footer .content .sns_area.fackbook {background:url(../img/icon_sns_facebook.png) 0 0 no-repeat;}
+#footer .content .sns_area.fackbook:after {background:url(../img/icon_sns_facebook.png) 100% 0 no-repeat;}
+#footer .content .sns_area.fackbook:hover:after{opacity:1}
+#footer .content .sns_area.instagram{right:105px; background:url(../img/icon_sns_instar.png) 0 0 no-repeat;}
+#footer .content .sns_area.instagram:after{background:url(../img/icon_sns_instar.png) 100% 0 no-repeat;}

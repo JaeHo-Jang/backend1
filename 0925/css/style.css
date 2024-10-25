@@ -1,0 +1,95 @@
+*{margin: 0; padding: 0;}
+h2{
+    width:1070px;
+    height: 100px;
+    margin: 10px auto;
+    line-height: 100px;
+}
+#content{
+    position: relative;
+    width: 1070px;
+    height: 1300px;
+    margin: 0px auto;
+    border: 1px solid red;
+}
+#content img{
+    display: block;
+}
+.img1{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.img1::after{
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    background-color: rgba(0, 0, 255, 0.7);
+    
+}
+.img1:hover::after{
+    transition: all 0.4s;
+    width: 100%;
+    /* background-color: rgba(0,0,0,0.5); */
+}
+div a p{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 100px;
+    box-sizing: border-box;
+    /* border, padding 포함 100% 사이징 */
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.4s;
+    opacity: 0;
+    background: url(../images2/more.png) no-repeat 50% 80%;
+}
+div a:hover::after p{
+    opacity: 1;
+}
+.img2{
+    position: absolute;
+    top: 0;
+    left: 270px;
+}
+.img3{
+    position: absolute;
+    top: 0;
+    left: 540px;
+}
+.img4{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.img5{
+    position: absolute;
+    top: 270px;
+    left: 0;
+}
+.img6{
+    position: absolute;
+    top: 270px;
+    right: 0;
+}
+.img7{
+    position: absolute;
+    top: 540px;
+    left: 0;
+}
+.img8{
+    position: absolute;
+    top: 540px;
+    left: 270px;
+}
+.img9{
+    position: absolute;
+    top: 540px;
+    right: 0;
+}

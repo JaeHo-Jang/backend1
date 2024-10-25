@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #333;
+        }
+        .tab {
+            display: flex;
+            list-style: none;
+            height: 40px;
+            text-align: center;
+        }
+
+        .tab li {
+            width: 70px;
+            line-height: 40px;
+        }
+
+        .tab li.on {
+            background-color: red;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .tab_list {
+            width: 280px;
+            height: 200px;
+            /* border: 1px solid #333; */
+        }
+
+        .tab_list div {
+            display: none;
+        }
+
+        .tab_list div.on {
+            display: block;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            $('.tab li').click(function () {
+                var i = $(this).index();   // 밑 본문 index번호 주석 달아놈.
+                // alert(i);
+
+                $('.tab li').removeClass('on');
+                $('.tab_list div').removeClass('on');
+                $('.tab li').eq(i).addClass('on');
+                $('.tab_list div').eq(i).addClass('on');
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="box">
+        <ul class="tab">
+            <li class="on">공지사항</li> <!-- index 0-->
+            <li>갤러리</li> <!-- index 1-->
+            <li>정보마당</li> <!-- index 2-->
+        </ul>
+        <div class="tab_list">
+            <div class="on">공지사항ㅇㅇ<br>공지사항ㅇㅇ</div> <!-- index 0-->
+            <div>갤러리ㅇㅇ<br>갤러리ㅇㅇ</div> <!-- index 1-->
+            <div>정보마당ㅇㅇ<br>정보마당ㅇㅇ</div> <!-- index 2-->
+        </div>
+    </div>
+</body>
+
+</html>

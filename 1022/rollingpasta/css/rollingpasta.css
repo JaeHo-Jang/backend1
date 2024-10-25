@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    width: 1920px;
+    height: 600px;
+    background: url(../pastaimg/back.png) no-repeat 0 0;
+}
+
+.bigbox {
+    display: block;
+    margin: 0 auto;
+    width: 1200px;
+    height: 560px;
+    position: relative;
+
+}
+
+.logo {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+
+.subtop {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+}
+
+.subtop img {
+    position: relative;
+    padding: 20px 0;
+    left: 40%;
+}
+
+.subtop p {
+    text-align: center;
+}
+
+.subtop {
+    line-height: 1.5em;
+}
+
+.subtop p span:first-child {
+    color: #003b5a;
+    font-size: 1.250em;
+    font-weight: 700;
+}
+
+.sub1 {
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    width: 185px;
+    height: 200px;
+}
+
+.sub1 a{
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-image: url(../pastaimg/intro_slide_ico1_on.png);
+}
+
+
+.sub2 {
+    position: absolute;
+    left: 55%;
+    top: 40%;
+    width: 185px;
+    height: 200px;
+}
+
+.sub2 a{
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-image: url(../pastaimg/intro_slide_ico2.png);
+}
+
+
+.sub3 {
+    position: absolute;
+    left: 70%;
+    top: 40%;
+    width: 185px;
+    height: 200px;
+}
+
+.sub3 a{
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-image: url(../pastaimg/intro_slide_ico3.png);
+}
+
+.sub4 {
+    position: absolute;
+    left: 85%;
+    top: 40%;
+    width: 185px;
+    height: 200px;
+}
+
+.sub4 a{
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-image: url(../pastaimg/intro_slide_ico4.png);
+}
+
+.submenu span {
+    display: block;
+    width: 130px;
+    position: absolute;
+    top: 90%;
+    text-align: center;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.sub2:hover a{
+    background: url(../pastaimg/intro_slide_ico2_on.png) no-repeat;
+}
+
+.sub3:hover a{
+    background: url(../pastaimg/intro_slide_ico3_on.png) no-repeat;
+}
+
+.sub4:hover a{
+    background: url(../pastaimg/intro_slide_ico4_on.png) no-repeat;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //사용자의 이름을 입력받아 인사하는 코드
+        var userName = prompt("이름을 입력하세요 :", "홍길동");
+        document.write("안녕하세요, " + userName + "님!", "<br/>");
+
+        //백틱
+        document.write(`안녕하세요, ${userName}님!`);
+
+        //배열에 숫자 저장하기
+        var numbers = [1,2,3,4,5];
+        // document.write(numbers);   // 1,2,3,4,5 출력
+        document.write(numbers[0], "<br/>");  // 1
+        document.write(numbers[1], "<br/>");  // 2
+        document.write(numbers[2], "<br/>");  // 3
+        document.write(numbers[3], "<br/>");  // 4
+        document.write(numbers[4], "<br/>");  // 5
+
+
+        // i는 0이다 i가 5보다 작을 때(까지) i를 1씩(위 0번방, 1번방, 2번방 ~~ 식) 더해준다 (for 반복문)
+        for(var i=0; i < 5; i++ ) {
+            document.write(numbers[i], "<br/>");
+        }
+
+
+
+        //  !!!!! numbers.length ===> 방이 몇개인지 몰라 db가면 계속 변화가(탈퇴,가입 등)있어 그때그때 방을 세줄수 없음 -> 따라서 length는 컴퓨터가 그때그때 길이(방개수)를 읽어줌)!!!!!!중요
+        for(var i=0; i < numbers.length; i++ ) {
+            document.write(numbers[i], "<br/>");
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

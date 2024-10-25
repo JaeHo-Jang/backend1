@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var a = '5';
+        var b = 5;
+
+        console.log(a==b);  // true
+        console.log(a===b);  // false
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        var x = 10;
+        var y = 5;
+        x += y;  //   x = x+y
+        x *= 2;  //   x = 위 x값(x+y) * 2
+
+        console.log(x);
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        var i = true;
+        var j = false;
+
+        console.log(i && j);  //  둘다 트루여야만 트루 ----> false출력
+        // 뭐뭐 사이에 있다 라고 할때 이 && 앤드 연산을 자주 쓴다.
+        console.log(i || j);   //  둘중에 하나라도 트루면 트루 ------->true출력
+        console.log(!i);   // i는 true가 아니다 ----->false로 출력 ----> !는 not의 의미 ===> j에 쓰면 true값 출력
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+        /* - - - - - - - - - - - - - - - 삼항연산 - - - - - - - - - - - - - - - */
+        // let age = 20;
+        let age = prompt("나이를 입력하세요", "0");
+        let message = age >= 18 ? "성인입니다." : "미성년입니다.";
+
+        // console.log(message);
+        document.write(message);
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        add();
+
+        function add() {
+            document.write("안녕하세요")
+        }
+        // 일반 함수 정의 방식임 ---> 호이스팅 기능을 지원함(아래와의 차이 꼭 알아둬)
+        // 호이스팅 : 물건을 끌어올리다
+        // 어느 위치에 작성하더라도 호출 가능
+
+
+// =================================================================
+
+        // add();
+        // 기본적으로 위부터 읽음 따라서 지금 코딩은 add를 못읽음
+
+        var add = function() {
+            document.write("안녕하세요")
+        }
+        // 호이스팅 기능이 없는 -> 이름이 없는 익명함수
+        // 익명 함수 선언 참조 방식이다 (교재 133p.)
+
+        add();
+
+
+
+// ==============리엑트에 가면 이렇게 쓴다. ↓
+
+        var add = () => {
+            document.write("안녕하세요")
+        }
+
+        add();
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

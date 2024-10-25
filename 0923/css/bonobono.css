@@ -1,0 +1,119 @@
+*{margin: 0; padding: 0;}
+.bigbox{
+    width: 500px;
+    height: 500px;
+    position: relative; /*다른 동그라미의 기준이 되기 위해 적음.*/
+    border: 1px solid #333;
+    margin: 100px auto 0;
+}
+.face{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(81, 110, 240);
+    bottom: 0;
+    border: 10px solid #333;
+    box-sizing: border-box; /*선두께 포함하여 리사이징(선이 안쪽으로 파고들어0 내장비만 만듦)*/
+    /* 원래는 500에 선 20해서 520이여야 되는데 박스사이징을 통해 선포함하여 500으로 바뀜 */
+}
+.eyeball{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 180px;
+}
+.eyeball.left{
+    left:80px
+}
+.eyeball.right{
+    right: 80px;
+}
+.nose{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    margin-left: -20px;
+    /* 좌우 중앙정렬 50%이후 넓의 40의 절반인 -20으로 가운데 위치 */
+    z-index: 2;
+}
+.mouth{
+    width: 100px;
+    height: 74px;   
+    border: 5px solid #000;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 350px;
+}
+.mouth.left{
+    transform-origin: left bottom;
+    transform: rotate(-30deg);
+    left: 190px;
+}
+.mouth.right{
+    transform-origin: right bottom;
+    transform: rotate(30deg);
+    right: 190px;
+}
+.brow{
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    background-color: #333;
+    top: 50px;
+    left: 20px;
+}
+.line{
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #333;
+    top: 0px;
+    left: 280px;
+}
+.line1{
+    /* transform-origin: left center; */
+    transform: rotate(-20deg);
+    top: 330px;
+}
+.line2{
+    top: 370px;
+    transform: rotate(0deg);
+}
+.line3{
+    /* transform-origin: left center; */
+    top: 410px;
+    transform: rotate(20deg);
+}
+.linel{
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #333;
+    top: 0px;
+    left: 120px;
+}
+.line4{
+    /* transform-origin: left center; */
+    transform: rotate(20deg);
+    top: 330px;
+}
+.line5{
+    top: 370px;
+    transform: rotate(0deg);
+}
+.line6{
+    /* transform-origin: left center; */
+    top: 410px;
+    transform: rotate(-20deg);
+}

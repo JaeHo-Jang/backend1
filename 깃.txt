@@ -1,0 +1,42 @@
+***** 첫 컴퓨터 세팅 시에는***** 
+교재 28p에서 환경설정 유저아이디 이메일 세팅 필수로 하고 진행해야 함.
+
+
+C:/ hello4-git  폴더를 만든다.
+43페이지부터 따라하기
+Vscode를 열고 
+File – new window
+file – open folder
+
+ctrl + shift + `
+새터미널을 연다.
+
+Git init  - 초기화 시켜주면 .git 폴더만들어짐
+.git 폴더가 안보일 경우
+세팅에 들어가서 exclude검색 후 .git을 삭제해주면 보임.(숨김처리 삭제)
+
+Hac.txt 내용입력
+git add hac.txt
+git commit -m "mes1"
+
+git log
+git commit -am "mes2"
+이미 커밋한 적이 있으면 이명령어로 한꺼번에 처리
+
+깃허브 가입하기 131
+
+135page 원격저장소 만들기
+
+
+=================다른 장소로 보내기(가져오기)=================
+폴더 하나 만들고
+오픈 윈도우 후에 폴더지정 후
+내 깃허브 링크주소 복사 한 후 (code버튼)
+터미널 부쉬에 git clone 주소 하면 됨.
+
+강사님 깃 주소 : https://github.com/bhher/backend
+
+
+===========내컴퓨터 내려받아 작업===========
+교재 170p
+git pull참고

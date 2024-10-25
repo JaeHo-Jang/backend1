@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    ul{
+        list-style: none; 
+        /* 블릿(동그라미) 없애기 */
+    }
+    li{
+        line-height: 50px;
+        /* 줄간격(행간) - 굉장히 많이 쓰이는 css*/
+    }
+    label{
+        width: 120px; float: left;
+        }
+        /* 지금은 몰라도 되는데 레이블하고 인풋창이 있으면 레이블에만 플로트를 주면 이뻐진다. tip! */
+        /*  ㄴ 레이블에만 주면 인풋창은 따라가는 성질이 생긴다. */
+</style>
+
+</head>
+
+
+<body>
+    <form action="" method="post">
+        <!-- 밑에 작성한 파일은 엑션이라는 php에 저장할거임. 그런 코드 -->
+        <ul>
+            <li>
+                <label for="r-name">이름</label>
+                <input type="text" name="r-name" id="r-name">
+                <!-- 왼쪽부터 글자가 들어가겟다, 전송되는 변수, 네모박스 옆 정확한 포커싱을 못해도 할수있게 접근성을 높이는 작업=이름을 눌러도 커서가 잡힘-->
+                 <!-- 모양을 이쁘게 만들어주기 위해 레이블과 인풋을 따로 쓰는거다. -->
+            </li>
+            <li>
+                <label for="r-pass">패스워드</label>
+                <input type="password" name="r-pass" id="r-pass">
+                <!-- 타입 패스워드 - 타입차이 기억. -->
+            </li>
+            <li>
+                <label for="r-phone">휴대폰</label>
+                <input type="text" name="r-phone" id="r-phone">
+            </li>
+            <li>
+                <label for="r-email">이메일</label>
+                <input type="email" name="r-email" id="r-email">
+                <!-- 타입 이메일 - 타입차이 -->
+            </li>
+            <li>
+                <label for="r-addr">배송주소</label>
+                <input type="text" name="r-addr" id="r-addr">
+            </li>
+            <li>
+                <label for="d-day">배송 지정</label>
+                <input type="date" name="d-day" id="d-day">
+            </li>
+            <li>
+                <label for="memo">메모</label>
+                <textarea name="memo" id="memo" cols="40" rows="4"></textarea>
+            </li>
+            <li>
+                <input type="submit" value="예약하기">
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

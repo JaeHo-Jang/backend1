@@ -1,0 +1,105 @@
+*{margin: 0; padding: 0;} /*시작 별표는 모든 선택자를 의미함.*/
+.wrap{
+    width: 900px;
+    margin: 0 auto;  /*넓이가 있는 요소 에다가 마진 0 auto를 주면 중앙정렬이 된다.*/
+    
+}
+header{
+    position: relative;
+    height: 300px;
+    background: url(../images/top.jpg) 0% 30%; /*퍼센트는 포지션임.*/
+}
+/* ★★부모한테 relative를 주고 자식한테 absolute를 주면 자식을 마음대로 움직일 수 있음.★★*/
+/* relative 뺏을 때 차이 봐바( 가두리를 하기 위한 범위지정임.) */
+/* header h1{} */
+.logo{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    color: #fff;
+}
+nav{
+    width: 900px;
+    height: 70px;
+    background-color: #2a1d0a;
+}
+nav ul{
+    list-style: none; /*블릿 없애기*/
+}
+nav ul li{
+    float: left;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+nav ul li a{
+    display: block; /*a는 인라인 요소 이므로 block처리해서 넓이 높이를 줌*/
+    width: 150px;
+    height: 40px;
+    line-height: 40px; /*위 높이와 라인 높이를 맞춰서 세로 중앙정렬*/
+    border: 1px solid #fff;
+    text-align: center;
+    border-radius: 20px; /*모서리 둥글게*/
+    text-decoration: none; /*밑줄 없애기*/
+    color: white;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    background-color: white;
+    color: #000;
+    text-decoration: underline;
+}
+section{
+    width: 650px;
+    height: 550px;
+    background-color: #ccc;
+    float: left;
+}
+section h3{
+    padding: 10px 0;
+    text-align: center;
+}
+section article{
+    width: 270px;
+    height: 200px;
+    border: 1px solid #333;
+    float: left;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+article h4{
+    background: url(../images/kong.png) no-repeat 0 0;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+article p{
+    line-height: 170%; /*글자사이 줄간격*/
+    text-align: justify; /*양쪽정렬*/
+}
+aside{
+    width: 250px;
+    height: 550px;
+    background-color: #726054;
+    float: left;
+    text-align: center;
+}
+aside h3{
+    padding: 10px 0;
+}
+.content{
+    /* height: 550px; */
+    overflow: hidden;
+}
+aside img{
+    width: 220px;
+    padding-bottom: 10px;
+}
+footer{
+    /* clear: left; */
+    /* 클리어 레프트/라이프/both보단 위의 부모 content에 높이를 주는게 좋다 */
+    height: 60px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .flex-container{
+            width: 1500px;
+            background-color: dodgerblue;
+            display: flex;
+            /* flex-wrap: wrap;  해당 코딩 있고 없고 차이 확인 */
+            /* flex-wrap:nowrap;   : 넘쳐도 한줄로 표시(기본값으로 생략가능) */
+            /* flex-wrap:wrap    :  넘치면 줄바꿈 */
+            /* flex-wrap: wrap-reverse;   :  540p 참고 */
+
+            /* justify-content: center;  중앙을 기준으로 배치 - 참고 544p */
+            /* justify-content: space-around;  같은 간격으로 배치 - 참고 544p */
+            /* justify-content: space-between;  첫끝, 마지막끝 후 나머지 같은 간격 배치 - 참고 544p */
+            justify-content: space-evenly;  /*책에는 없음 .. 모든 공간이 균등하게 배분*/
+
+        }
+        .flex-container > div{
+            background-color: #f1f1f1;
+            width: 100px;
+            /* margin: 10px; */
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+            /* display: inline-block; */
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>flexiable boxes</h1>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+</body>
+
+</html>

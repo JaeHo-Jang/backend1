@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+    body{
+        font-size: 20px;
+    }
+    .font1{
+        font-size: 30px;
+    }
+    .font2{
+        font-size: 1em; /*별도 지정(신고)을 하지 않는 경우 모든 html에서는 기본글꼴크기 - 1em은 16px임*/
+        /* 위처럼 바디사이즈 부모에 20으로 설정을 하면 상속받은 상수코드는 즉 20 x 1em 으로 20px가 됨. */
+    }
+    .font3{
+        font-size: 0.5em;   /*요건 부모 20px x 0.5em해서 = 10px임*/
+    }
+    /* em은 쓰지마 그냥 알려준거야 -------> rem을 써 */
+</style>
+
+
+</head>
+<body>
+    <p>폰트 사이즈</p>
+    <p class="font1">폰트 사이즈</p>
+    <p class="font2">폰트 사이즈</p>
+    <p class="font3">폰트 사이즈</p>
+    <p class="font4">폰트 사이즈</p>
+
+</body>
+</html>

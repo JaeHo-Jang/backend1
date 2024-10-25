@@ -1,0 +1,146 @@
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color:#555}
+.cf::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* ================================================================ */
+
+section{
+    width: 1700px;
+    margin: 0 auto;
+}
+
+section .title{
+    height: 150px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+.title h1{
+    font-size: 60px;
+    padding: 20px 0;
+}
+.title h3{
+    font-size: 24px;
+    color: #d4d4d4;
+}
+.title h3::before{
+    content: '';
+    position: absolute;
+    background : url(../img3/ic_star_pink.png) no-repeat 0 0;
+}
+
+/* ================================================================ */
+
+section .inner{
+    height: 600px;
+    margin: 0 auto;
+}
+
+section .inner .cf{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+section .inner .cf li{
+    width: 25%;
+    padding: 20px 20px 0;
+    height: 600px;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+section .inner .cf li:nth-child(4){
+    border-right: none;
+}
+
+section .inner ul li .frame{
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+section .inner ul li .frame img{
+    display: block;
+    width: 100%;
+    /* 이미지를 줄이는 방법임 : 원래 600이 넘었으나 부모의 크기 400으로 줄여줌. */
+    transition: all 0.2s;
+}
+section .inner ul li .frame img:hover{
+    scale: 1.1;
+}
+
+section .inner .cf li .content .subt1, .subt2{
+    width: 54px;
+    height: 29px;
+    font-size: 13.2px;
+    padding: 6px 10px;
+    color: #ffffff;
+    line-height: 29px;
+    margin: 10px 0;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+section .inner .cf li .content .subt1{
+    background-color: #fb9622;
+
+}
+section .inner .cf li .content .subt2{
+    background-color: #0bab6d;
+}
+section .inner .cf li .content .maint1{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+section .inner .cf li .content .maint2{
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+
+section .inner .cf li .ft1 p{
+    color :#666
+}
+section .inner .cf li .ft1_1{
+    height: 43px;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+section .inner .cf li .ft1_2{
+    height: 43px;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+section .inner .cf li .ft2 p{
+    color :#000000;
+}
+section .inner .cf li .ft2_1{
+    height: 43px;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    margin-right: 10px;
+    border: 1px solid #f3f3f3;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+}
+section .inner .cf li .ft2_2{
+    height: 43px;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    border: 1px solid #f3f3f3;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+}

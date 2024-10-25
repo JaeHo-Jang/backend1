@@ -1,0 +1,115 @@
+*{margin: 0; padding: 0;}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+.cf:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.header_out{
+    width: 100%;
+    position: relative;
+
+}
+header{
+    width: 1400px;
+    height: 250px;
+    border: 1px solid #333;
+    margin: 0 auto;
+}
+
+header .sns{
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+header .sns li{
+    float: left;
+    margin-left: 10px;
+}
+
+header .lnb{
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+header .lnb li{
+    float: left;
+    /* margin-right: 10px; */
+    font-size: 13px;
+    padding: 10px;
+    background: url(../images/bar.png) no-repeat 0% 50%;
+}
+header .lnb li:first-child{
+    background: none;
+}
+/* nth-child(1((숫자)))을 써도됨 */
+
+header .logo{
+    width: 200px; /*로고크기 변경은 지금 넓이와 밑에 img를 100프로 참고*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+header .logo img{
+    width: 100%; /*로고크기 변경은 위에 넓이와 여기 img를 100프로 참고(디스플레이 블럭까지 하면 좀더 정밀한 코딩*/
+}
+
+.main_menu{
+    position: absolute;
+    top: 220px;
+    left: 0;
+    width: 100%;
+}
+
+.gnb{
+    width: 1400px;
+    margin: 0 auto;
+    height: 30px;
+    position: relative;
+    z-index: 10;
+}
+.gnb > li{
+    float: left; /*옆으로 나열*/
+    background-color: rgb(239, 240, 237);
+    position: relative;
+}
+.gnb li a{
+    display: block;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color:black;
+    font-weight: bold;
+}
+.gnb li ul{
+    position: absolute;
+    background-color: rgb(239, 240, 237);
+    display: none;
+}
+.gnb:hover li ul{
+    /* 호버를 gnb에 주냐 li에 주냐에 따라 호버영역 달라짐. 비교해봐 */
+    display: block;
+}
+
+
+.main_menu .shadow{
+    top: 30px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(239, 240, 237);
+    display: none;
+}
+
+.gnb:hover + .shadow{
+    display: block;
+}

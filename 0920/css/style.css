@@ -1,0 +1,92 @@
+*{margin: 0; padding: 0;}
+/* 모든 요소에 마진 패딩 0 초기화 -> 브라우저 마다 기본값이 다르기 때문에 초기화하고 내맘대로 통일 설정하기 위함. */
+#container{
+    width: 800px;
+    margin: 0 auto;
+    /* 전체넓이 800에 중앙정렬 */
+}
+header{
+    background-color: #f46075;
+    overflow: hidden;
+    padding: 10px 0;
+}
+header h1{
+    float: left;
+    margin-top: 30px;
+    margin-left: 50px;
+    color: #fff;
+}
+header img{
+    float: right;
+    margin-right: 20px;
+}
+nav{
+    height: 60px;
+    background-color: #ccc;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    float: left;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+nav ul li a{
+    display: block;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px; /*a의 블럭 높이와 동일하게 맞추어 위아래 정렬이 됨. **한줄일 때만*/
+    text-decoration: none;
+    color: #000;
+}
+nav ul li a:hover{
+    background-color: #f46075;
+    color: #fff;
+    border-radius: 20px;
+}
+section{
+    width: 550px;
+    height: 550px;
+    background-color: skyblue;
+    float: left;
+}
+section h2{
+    text-align: center;
+    padding: 10px 0;
+}
+aside{
+    width: 250px;
+    height: 550px;
+    float: left;
+    background-color: #ffffcc;
+    text-align: center; /*글자나 그림은 전부 텍스트얼라인 센터로 중앙정렬 가능*/
+}
+section article{
+    width: 220px;
+    height: 200px;
+    border: 1px solid #333;
+    background-color: white;
+    float: left;
+    padding: 10px;
+    margin: 0 0 15px 20px;
+}
+section article p{
+    font-size: 13px;
+    margin-top: 5px;
+}
+article h3{
+    background: url(../img/bg.png) no-repeat;
+    padding-left: 25px;
+}
+.main{
+    overflow: hidden;
+}
+footer{
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+    text-align: center;
+    color: white;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            float: left;
+            width: 1200px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #banner_wrap {
+            width: 1900px;
+            margin: 0 auto;
+            border: 1px solid #aaa;
+            /* 전체넓이는 300(패딩포함 ) */
+            box-sizing: border-box;
+        }
+
+        #frame {
+            width: 1200px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ul */
+        #banner {
+            width: 1200px;
+            transition: all 0.5s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>롤링 슬라이드 배너 만들기</h1>
+    <div id="banner_wrap">
+        <div id="frame">
+            <ul id="banner">
+                <li><a href="#"><img src="images/slide1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/slide2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/slide3.jpg" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // var list = document.getElementById('banner');
+        // var listLi = document.querySelectorAll('#banner li');
+        // var li_width = 1200;
+        // var num = 0;
+
+
+        // // 자동반복
+        // function autoplay() {
+        //     if (num == 1) {
+        //         num = 0;
+        //         list.style.transition = 'none';
+        //         list.style.marginLeft = 0;
+        //     }
+
+        //     setTimeout(function () {
+        //         num++;
+        //         list.style.transition = 'margin-left 0.5s';
+        //         list.style.marginLeft = -li_width * num + "px";
+        //     }, 50);
+        // };
+        // setInterval(autoplay, 1000);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 하나의 이미지에 링크를 여러개 하는걸 이미지맵이라 한다. -->
+    <img src="images/kids.jpg" alt="" usemap="#map1">
+    <!-- 사용할 맵을 유즈맵태그로 잡고, 맵이름 설정(맵이름설정시 꼭 #붙여줘야함) -->
+    <map name="map1">
+        <area shape="rect" coords="54,38,145,58" href="http://cafe.naver.com/doithtml5" target="_blank" alt="doithtml5카페">
+        <!-- rect는 네모의 약자 -->
+        <area shape="rect" coords="255,44,362,66" href="http://www.facebook.com/do.it.html5" target="_blank" alt="doithtml5페이스북">
+        <!-- 그림판에서 해당 사진을 연후 커서가져가면 좌표가 나옴, 왼쪽상단끝부터 오른쪽 상단끝 각 좌표 연결하여 coords에 입력 -->
+
+    </map>
+</body>
+</html>
