@@ -1,0 +1,138 @@
+/* Reset some default styling */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+/* Container max width */
+.mw1200 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header_line {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_line h1 {
+    margin: 0;
+}
+
+.header_line img {
+    width: 150px;
+}
+
+/* Main Navigation Menu */
+.gnb_wrap {
+    background-color: #333;
+}
+
+.gnb {
+    display: flex;
+    justify-content: center;
+}
+
+.gnb ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.gnb > ul > li {
+    position: relative;
+}
+
+.gnb > ul > li > a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 15px 10px;
+    display: block;
+}
+
+.gnb > ul > li:hover > a {
+    background-color: #444;
+}
+
+.gnb ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    display: none;
+    list-style: none;
+}
+
+.gnb ul li:hover > ul {
+    display: block;
+}
+
+.gnb ul ul li a {
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.gnb ul ul li a:hover {
+    background-color: #555;
+}
+
+/* Background Elements */
+#gnb_bg, .nav-bg, .mnav-bg {
+    display: none;
+}
+
+/* Main Content Section */
+.main-content {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.welcome-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0;
+}
