@@ -169,10 +169,10 @@
         });
 
         var scrollPosition = 0;
-        $('section > article').mousewheel(function(event,d) {
+        $('section > article').mousewheel(function (event, d) {
             event.preventDefault();
             console.log(event.originalEvent.deltaY);
-            scrollPosition += (-d*100)
+            scrollPosition += (-d * 100)
             $('html', 'body').scrollLeft(scrollPosition);
         });
 
