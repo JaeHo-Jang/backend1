@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+            ul {
+                width: 600px;
+                margin: 0 auto;
+                height: 200px;
+            }
+            ul li{
+                float: left;
+                list-style: none;
+            }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- html안에 javascript 삽입 -->
+    <ul class="gnb">
+        <li>
+            <a href="#">
+                <img src="images/menu02_out.png" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/menu02_out.png" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/menu03_out.png" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/menu04_out.png" alt="">
+            </a>
+        </li>
+       
+    </ul>
+
+    <script>
+        var links = document.querySelectorAll('.gnb li a');
+        links.forEach(function(link) {    // gnb li a 를 다 돌면서 link라는 한개에 아래 펑션 적용.  --> 다중선택 시 forEach문을 돌려줘야 한다.
+            link.addEventListener('mouseenter', function() {
+                // 마우스를 올렸을 때 
+                var img = link.querySelector('img');
+                img.src = img.src.replace('out','over');
+                //현재 img.src에 들어있는 파일명중 out -> over로 바꿈
+            });
+            link.addEventListener('mouseleave', function() {
+                // 마우스를 내렸을 때 
+                var img = link.querySelector('img');
+                img.src = img.src.replace('over','out');
+                //현재 img.src에 들어있는 파일명중 over -> out로 바꿈
+            });
+        });
+    </script>
+
+</body>
+
+</html>
