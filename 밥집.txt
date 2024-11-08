@@ -244,3 +244,50 @@ dist에 js나 css가져가서 쓰면 됨.
 
 ** bxslider의 css는 css폴더를 별도로 만들지 않았기 떄문에 css폴더를 별도로 만들었을 경우
 해당 css파일에 들어가서 검색 : images를 한 후 ../ 방나가기 붙여주면 이미지가 먹음
+
+
+
+============================1107================
+
+https://blog.outsider.ne.kr/322
+자바스크립트 키보드 키코드 -> 중요함
+
+카카오맵 api연동
+https://apis.map.kakao.com/web/guide/
+
+
+
+=======================1108============================
+https://codepen.io/ 참고
+공부해서 보라
+쓰는것도 쉽지않다
+
+[날씨api]
+https://openweathermap.org/
+id :wogh001004@naver.com
+내꺼 키값 : 0b06abdea5d36f2f072faa3b91e0dd2c
+
+[api를 호출하는 코드]
+http://api.openweathermap.org/data/2.5/forecast?id=1835553&appid=0b06abdea5d36f2f072faa3b91e0dd2c&units=metric
+                                                                    ㄴ 도시코드            ㄴ 내 키값
+
+검색하여 코드를 불러올 수 있는데
+검색 후 클릭하면 상단 주소창에 city/ 옆 도시코드임
+ex 수원 : 1835553
+
+위 api호출 코드를 웹사이트 에 입력
+제대로 안나오면 json뷰어를 확장프로그램 설치 후 재실행 하면 코드가 나옴
+
+섭씨온도로 변경 --> 내호출 코드 뒤에 &units=metric 붙이셈
+ -> &units=imperial(화씨)는 이걸로 붙여
+
+
+[날씨아이콘주소]
+https://openweathermap.org/weather-conditions
+아이콘 예제 : https://openweathermap.org/img/wn/10d@2x.png
+
+
+
+
+[깃허브]
+wogh00100@gmail.com
