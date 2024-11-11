@@ -291,3 +291,36 @@ https://openweathermap.org/weather-conditions
 
 [깃허브]
 wogh00100@gmail.com
+
+
+
+===================11.11===================
+자바 6,7,8 jdk설치
+17p 이클립스 설치
+
+[자바설치]
+https://signon.oracle.com/signin
+wogh001004@naver.com
+Wo6로 시작
+
+10p환경변수.
+윈도우 "시스템 환경 변수" 검색 후 편집창
+ ㄴ 시스템변수 중 "path" 편집
+
+[vs코드]
+마켓플레이스 -> java검색 후 컵모양 : 익스텐션 팩 포 자바 설치 후 
+컨트롤 쉬프트 p  -> java검색 및 뉴크리트해서 폴더만들어 컨트롤 f5로 헬로우 월드뜨는것 까지 확인.
+
+
+
+[리엑트]
+node.js 설치
+[--터미널에서 node --version   시 안되었을때 설정--]
+%appDate%를 파일탐색기에 주소치고
+npm 폴더를 만들어주기
+** 이후 vs코드 관리자 권한 실행 후 터미널에 node --version치면 버전나옴.
+
+이후
+npx create-react-app test 실행
+
+한참후 cd test,   npm start 치면 서버 켜지면서 인터넷 열림

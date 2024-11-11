@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //함수스코프
+        function blockScope () {
+            let x = 10;
+            if (true ) {
+                let x = 20;
+                console.log("블랙 내부 x :", x);
+
+            }
+            console.log("블록 외부 x :", x);
+        }
+        blockScope();
+
+        // var = 함수전체에 유효
+        // let 블럭내부(중괄호) 안에서만 유효
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

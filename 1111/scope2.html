@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //함수스코프
+        function scopeCompare () {
+            var a = 1;
+            let b = 2;
+            if (true ) {
+                var a = 3;
+                let b = 4;
+                console.log("if 블록 내부 - a :", a);
+                console.log("if 블록 내부 - b :", b);
+
+            }
+            console.log("if 블록 외부 - a :", a);
+            console.log("if 블록 외부 - b :", b);
+        }
+        scopeCompare();
+
+        // var = 함수전체에 유효
+        // let 블럭내부(중괄호) 안에서만 유효
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
