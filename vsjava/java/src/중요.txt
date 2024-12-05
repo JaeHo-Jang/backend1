@@ -7,3 +7,21 @@ AccommodationReserve
 a 1202
 Hak 5를 다 공부하자
 db쪽임
+
+
+a 1204 에 있는
+기본파일들
+map, list는 스프링 시 중요하니까 잘 봐
+
+
+스프링에서 잘 쓰는거
+dao, dto, vo, service, serviceImpl, controller, mapper,
+
+
+[gpt질문]
+dao,dto,vo,service,serviceImpl,controller,mapper 사용하는 spring 예제 만들어주고 설명 붙여줘 왜사용하는지도 알려주고
+
+
+[작업시간 줄여준데]
+https://wordic.loeaf.com/variable-name
+한국말로 단어 치면 변수명 등 개발자들이 많이 썻던 축약어들 추천해주는 사이트
