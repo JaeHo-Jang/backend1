@@ -1,0 +1,4 @@
+삭제 : drop
+필드변경 : change
+타입변경 : modify
+추가 : add

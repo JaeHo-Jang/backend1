@@ -324,3 +324,10 @@ npm 폴더를 만들어주기
 npx create-react-app test 실행
 
 한참후 cd test,   npm start 치면 서버 켜지면서 인터넷 열림
+
+
+
+[my sql]
+mysql 다운로드 -> 8.0.40다운
+커스텀 설정
+server 8.0.40    +   어플리케이션(workbench 8.0 설정 후 설치
