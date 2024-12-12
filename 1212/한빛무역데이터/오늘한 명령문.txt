@@ -1,0 +1,48 @@
+SELECT * FROM 한빛무역.고객;
+select 고객번호, 담당자명, 고객회사명, 마일리지 AS "10% 인상된 마일리지" from 고객;
+select 고객번호, 담당자명, 마일리지 from 고객 where 마일리지 >= 100000;
+
+select 고객번호, 담당자명, 도시, 마일리지 AS 포인트 from 고객 where 도시 = '서울특별시'
+order by 마일리지 desc;
+
+select * from 고객 limit 3;
+select * from 고객 order by 마일리지 desc limit 3;
+select * from 고객;
+select distinct 도시 from 고객;
+select 23+5 AS 더하기,
+       23-5 AS 뺴기;
+
+select * from 고객 where 담당자직위 <> '대표이사';
+
+== 
+select 고객번호, 담당자명, 마일리지, 도시 from 고객 where 도시='부산광역시'
+union
+select 고객번호, 담당자명, 마일리지, 도시 from 고객 where 마일리지 < 1000 order by 1(내가 선택한 것중에서 첫번째로 정렬);
+
+union문과 아래문은 결과출력이 동일 (참고)
+== 
+select 고객번호, 담당자명, 마일리지, 도시 from 고객 where 도시='부산광역시'
+or 마일리지 < 1000 order by 1;
+
+
+select * from 고객 where 지역 is null;  (잘안씀)
+select * from 고객 where 지역="";
+
+
+select 고객번호, 담당자명, 담당자직위 from 고객 where 담당자직위 = "영업 과장" or 담당자직위 = "마케팅 과장";
+
+
+select 고객번호, 담당자명, 담당자직위 from 고객 where 담당자직위 = "영업 과장" or 담당자직위 = "마케팅 과장";
+select 고객번호, 담당자명, 담당자직위 from 고객 where 담당자직위 in ("영업 과장" , "마케팅 과장");
+
+select 담당자명, 마일리지 from 고객 where 마일리지 between 100000 and 200000;
+
+select * from 고객 where 도시 Like "%광역시" and (고객번호 like '_C%' or 고객번호 like '__c%');
+   ***** _는 한글자를 대체함 따라서 두번째 세번째 고객번호에 C가 포함된 사람만 소팅
+
+select char_length('hello'), length('exit'), char_length('안녕'), length('안녕');
+select concat('dream','come','true'), concat_ws('-', '2023', '01', '29');
+
+select now(), year(now());
+select if(125000 * 450 > 5000000, '초과달성', '미달성');
+select sum(마일리지) as 마일리지합 from 고객 where 도시='대전광역시';

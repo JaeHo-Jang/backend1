@@ -53,7 +53,7 @@ public class HotelManager {
 		String guestName = reserve[origin.length].getGuestName();
 		String guestPhone = reserve[origin.length].getGuestPhone();
 		if (newReserve.getReserveDate().equals(today)) {
-			room[indexFloor][indexNum].setGuest(new Guest(guestName, guestPhone));
+			room[indexFloor][indexNum].setGuest(new Customer(guestName, guestPhone));
 			room[indexFloor][indexNum].setRoomStatus("예약중");
 		}
 		System.out.println(reserve[origin.length].toString());
@@ -184,7 +184,7 @@ public class HotelManager {
 		int indexFloor = roomNum / 100 - 2; 
 		int indexNum = roomNum % 100 - 1;
 		room[indexFloor][indexNum].setRoomStatus("빈방");
-		room[indexFloor][indexNum].setGuest(new Guest("", ""));
+		room[indexFloor][indexNum].setGuest(new Customer("", ""));
 		System.out.println(room[indexFloor][indexNum].toString());
 		System.out.println("체크아웃 완료");
 	}

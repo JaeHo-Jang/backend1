@@ -4,7 +4,7 @@ public class Room {
 	private int roomNo;
 	private String roomType;
 	private String roomStatus;
-	private Guest guest;
+	private Customer guest;
 	
 	public Room(int roomNo) {
 		this.roomNo = roomNo;
@@ -14,7 +14,7 @@ public class Room {
 			roomType = "single";
 		}
 		roomStatus = "빈방"; // 초기화한 후 예약받을 때 상태 변경
-		guest = new Guest("", ""); // 초기화한 후 예약받을 때 게스트 만들기
+		guest = new Customer("", ""); // 초기화한 후 예약받을 때 게스트 만들기
 	}
 	
 	public int getRoomNo() {
@@ -35,10 +35,10 @@ public class Room {
 	public void setRoomStatus(String roomStatus) {
 		this.roomStatus = roomStatus;
 	}
-	public Guest getGuest() {
+	public Customer getGuest() {
 		return guest;
 	}
-	public void setGuest(Guest guest) {
+	public void setGuest(Customer guest) {
 		this.guest = guest;
 	}
 	@Override

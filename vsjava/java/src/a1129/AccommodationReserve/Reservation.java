@@ -3,6 +3,11 @@ package a1129.AccommodationReserve;
 import java.util.Scanner;
 
 public class Reservation {
+    public Reservation(String departure, String destination, String date, String time, String seat, String name,
+            String phoneNumber) {
+        //TODO Auto-generated constructor stub
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         AccManager manager = new AccManager();//숙소관리 객체
@@ -103,5 +108,10 @@ public class Reservation {
         }
         
         
+    }
+
+    public Object getName() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getName'");
     }
 }

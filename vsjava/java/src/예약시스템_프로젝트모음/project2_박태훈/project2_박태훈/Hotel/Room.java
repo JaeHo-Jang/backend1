@@ -4,7 +4,7 @@ public class Room {
     private int roomNum;
     private String roomType;
     private String roomStatus;
-    private Guest guest;
+    private Customer guest;
 
     public Room(int roomNum){
         this.roomNum = roomNum;
@@ -14,7 +14,7 @@ public class Room {
             roomType = "Single";
         }
         roomStatus = "빈방";
-        guest = new Guest("", "");
+        guest = new Customer("", "");
     }
 
     public int getRoomNum() {
@@ -41,11 +41,11 @@ public class Room {
         this.roomStatus = roomStatus;
     }
 
-    public Guest getGuest() {
+    public Customer getGuest() {
         return guest;
     }
 
-    public void setGuest(Guest guest) {
+    public void setGuest(Customer guest) {
         this.guest = guest;
     }
 
