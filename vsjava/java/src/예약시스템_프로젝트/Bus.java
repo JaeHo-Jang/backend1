@@ -2,10 +2,12 @@
 
     import java.io.BufferedReader;
     import java.io.File;
-    import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
     import java.io.FileWriter;
     import java.io.IOException;
-    import java.time.Instant;
+import java.io.InputStreamReader;
+import java.time.Instant;
     import java.util.ArrayList;
 
     public class Bus {
@@ -43,7 +45,7 @@
 
         public static ArrayList<Bus> findAll() throws IOException {
             ArrayList<Bus> buses = new ArrayList<Bus>();
-            BufferedReader br = new BufferedReader(new FileReader(file));
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
             String line = null;
             while ((line = br.readLine()) != null) { // 파일을 한행씩 읽어와 반복 - 데이터가 있을때까지
                 // 콤마(,)로 배열로 나눠서 지정할 수 있는 메소드 = split
