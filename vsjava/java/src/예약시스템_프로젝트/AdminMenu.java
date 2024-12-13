@@ -68,9 +68,9 @@ public class AdminMenu extends AbstractMenu {
     }
 
     private void createbus() {
-        System.out.print("제목 : ");
+        System.out.print("버스 : ");
         String name = scanner.nextLine();
-        System.out.print("장르 : ");
+        System.out.print("행선지 : ");
         String arrive = scanner.nextLine();
         Bus bus = new Bus(name, arrive); // 버스아이디는 자동생성
         try {

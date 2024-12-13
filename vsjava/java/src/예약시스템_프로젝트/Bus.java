@@ -97,7 +97,7 @@ import java.time.Instant;
 
             while ((line = br.readLine()) != null) {
                 String[] temp = line.split(",");
-                if (busIdStr.equals(temp[0])) {// 삭제 대상값을 찾으면
+                if (busIdStr.equalsIgnoreCase(temp[0])) {// 삭제 대상값을 찾으면
                     continue; // 다음 반복으로 넘어감(복사되지 않게)
                 }
                 text += line + "\n"; // 읽은 문자열을 누적하여 복사
