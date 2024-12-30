@@ -1,0 +1,37 @@
+build.gradel은 버전관리를 하는 기능
+test폴더는 매우 중요함.
+
+
+[레이아웃. 타임리프]
+<html xmlns:th="https://www.thymeleaf.org/"
+      xmlns:layout="http://www.ultrag.net/nz/thymeleaf/layout">
+
+
+어플리케이션 프로퍼티는 설정을 맞춰주는 곳이고
+
+빌드그레들은 프로그램들을 설치하는 곳임.
+
+
+[mySQL 설정]
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+  spring.datasource.url=jdbc:mysql://localhost:3306/firstProject_db?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+(mysql://localhost:3306/firstProject_db?serverTimezone=UTC&characterEncoding=UTF-8) -->강사님이 보내준거
+spring.datasource.username=root
+spring.datasource.password=1234
+
+#true 설정 시 jpa 쿼리문 확인 가능
+spring.jpa.show-sql=true
+
+#DDL 정의시 DB의 고유 기능을 사용 가능
+spring.jpa.hibernate.ddl-auto=create
+
+# JPA의 구현체인 Hibernate가 동작하면서 발생한 SQL의 가독성을 높여줌
+spring.jpa.properties.hibernate.format_sql=true
+
+
+
+[제이슨 더미데이터]
+https://jsonplaceholder.typicode.com/
+
+[Talend API Tester] 설치
+https://chromewebstore.google.com/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm?hl=ko

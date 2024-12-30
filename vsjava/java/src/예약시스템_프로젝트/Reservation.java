@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Reservation {
     private long id; // 예매번호
-    private long busId; // 버스 대푯값
+    private long busId; // 버스 대표값
     private String busname; // 버스 제목
     private String seatName; // 좌석명
 

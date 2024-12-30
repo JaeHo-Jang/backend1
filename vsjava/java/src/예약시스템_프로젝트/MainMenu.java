@@ -54,7 +54,7 @@ public class MainMenu extends AbstractMenu {
         // =================================각 스위치 케이스 메소드=================================
     private boolean checkAdminPassword() {
         System.out.println("관리자 비밀번호를 입력하세요:");
-        return "admin1234".equals(scanner.nextLine()); // 세미콜론 추가
+        return "admin3288".equals(scanner.nextLine()); // 세미콜론 추가
     }
 
 

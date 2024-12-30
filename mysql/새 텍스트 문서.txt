@@ -2,3 +2,50 @@
 필드변경 : change
 타입변경 : modify
 추가 : add
+
+
+
+CREATE USER 'highgarden_user'@'localhost' IDENTIFIED BY '1234';
+''쪽은 설정 값
+
+
+
+CREATE USER 'highgarden_user'@'localhost' IDENTIFIED BY '1234';
+  새로운 유저를 만들고
+GRANT ALL PRIVILEGES ON highgarden_db.* TO 'highgarden_user'@'localhost';
+접근하고
+FLUSH PRIVILEGES;
+허락받는것
+
+[이게 한세트임]
+CREATE USER 'highgarden_user'@'localhost' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON highgarden_db.* TO 'highgarden_user'@'localhost';
+FLUSH PRIVILEGES;
+[이게 한세트임]
+
+
+
+***참고***
+1)))))
+create table board_table
+(
+id bigint primary key auto_increment,
+ boardTitle varchar(50),
+ boardWriter varchar(20),
+ boardPass varchar(20),
+ boardContents varchar(500),
+ boardHits int default 0,
+ createdAt datetime default now(), 
+ fileAttached int default 0
+);
+
+
+2)))))
+create table board_file_table
+(
+ id bigint auto_increment primary key,
+ originalFileName varchar(100),
+ storedFileName varchar(100),
+ boardId bigint,
+ constraint fk_board_file foreign key(boardId) references board_table(id) on delete cascade
+);
