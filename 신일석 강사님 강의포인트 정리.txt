@@ -1,0 +1,151 @@
+https://www.youtube.com/@MasterNKS/videos
+굉장히 좋다
+
+=============0106============= 신일석 강사님
+https://tinyurl.com/yc8cxuws
+
+=============0107=============
+
+https://www.w3schools.com/
+
+타임리프가 하는일 :
+컨트롤러에서 호출을 하는 리턴을 템플릿에서 가져와 쓸수있게 해주는 패키징이 되어있는 의존성 파일
+타임리프가 없으면 템플릿 폴더 등 관련파일이 없이 설치된것을 확인 할 수 있음.
+
+그레들 메이븐 차이
+원래 메이븐이 있었고 그레들이 나왓다.
+패키지 관리하는 툴이다.
+
+요청이 들어 왔는데 파일이 없으면 404
+요청은 잘했는데 서버에서 오류가 있으면 500번대임.
+200번은 성공
+
+★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+js 공부법   == js가 아니더라도 공부방식(접근) 이렇게 해라
+
+1. 로직(코드) 하나하나 분해하여 테스트를 해봐야 함
+  ㄴ 주의 : 이미 코딩된 것 따라치기, 완성본을 가지고 된다 하고 넘어가면 배림.
+2. 코드하나하나 분해하여 테스트 후 옵션과 메인 코드를 구분 할 것.
+3. js의 경우 결국 어떤걸 할려고 하는건지 (메인)
+  ㄴ 메인 이외 나머지는 전부 옵션이다 (꾸미는거)
+아래 코드 기준
+document.addEventListener('DOMContentLoaded', function() {
+    const changeColorBtn = document.getElementById('changeColorBtn');
+    const heading = document.querySelector('h1');
+    const messageBox = document.getElementById('messageBox');
+    const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEEAD'];
+    let colorIndex = 0;
+
+    changeColorBtn.addEventListener('click', function() {
+        colorIndex = (colorIndex + 1) % colors.length;
+        heading.style.color = colors[colorIndex];
+
+        messageBox.style.display = 'block';
+        messageBox.textContent = `색상이 변경되었습니다! (${colors[colorIndex]})`;
+
+        setTimeout(() => {
+            messageBox.style.display = 'none';
+        }, 2000);
+    });
+});
+
+결론 : changeColorBtn 선언한 id changeColorBtn 이 클릭이벤트가 발생 햇을때
+2초 후 없애겠다!
+
+    const changeColorBtn = document.getElementById('changeColorBtn');
+changeColorBtn.addEventListener('click', function() {
+        setTimeout(() => {
+            messageBox.style.display = 'none';
+        }, 2000);
+
+이게 메인코드임.
+★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+
+
+
+=============0108=============
+가상화서버
+반가상화서버(도커?)
+클라우드서버 차이 공부해보자
+
+* 기본키 (primary key)는 유효성을 보장하는 역활을 함.
+* 외래키의 개념 찾아보자(무엇인가?)
+
+
+[깃]
+git clone은  원격저장소를 가져오는것 -> 처음에 한번만 하는 것.
+
+업데이트 된것을 가져 올 때
+gti fetch : 변경된 사항에 대한 전체목록(변경정보)만 가져옴. (코드X) - 정보만 확인하고 싶으면 해.
+git pull : 변경된 브렌치에 대한 변경코드까지 모두 가져옴.
+git pull sub@@을 쓰면 됨.
+
+
+원하는 프로젝트 생성 경로에 들어와 cmd 후
+git clone https://github.com/ys-24fs-c802/sbb-mybatis.git sbb-mybatis
+               ① 깃 주소                                                ②내가원하는 폴더이름 지정
+
+vsstudio들어와서 git graph다운 후 실행
+
+1) (cherry-pick)체리픽은 내가 지정한 대상 커밋(수정내용)만 가져온다
+2) (merge)머지는 내역 전부다 가져온다.(통합한다)
+
+**git merge sub
+넘어올 사용할 놈으로 체크아웃해주고
+sub는 즉 가져올놈임 **
+
+깃 단축어
+씨드라이브 사용자 -> 메인이름에 -> 깃콘피그잇음 -> 메모장 또는 vs코드로 열어서 단축 코딩문 복붙 후 저장하면 사용가능
+
+**개발용 언어?
+개발할때 글씨체 따로 쓰는게 좋다고 하신 추천 글씨체 :
+https://github.com/naver/d2codingfont
+
+
+아직 뭔지 모르는데 이거 되게 좋다 써라 (터미널?) : tabby
+
+
+
+=============0109=============
+ ㄴ 사용자에게 경로를 받아 반환하기
+ ㄴ "c702_주석참고_message까지 파일 참고"
+
+디펜던시 인젝션 (의존성 주입)
+@Autowired   == 간단하게 new를 대신한다
+ ㄴ 자바는 인스턴스를 만들어서 실행하는 것이나
+ ㄴ 스프링에서는 위 어노테이션으로 class 지정을  new 인스턴스를 다 만들어줌 
+
+		★★[이거 반드시 외워라]★★
+	@GetMapping("/messages/{id}")
+                                                ㄴ 변수를 받겠다.
+	@ResponseBody
+	public String getMessage(@PathVariable("id") Integer id) {
+         		     ㄴ 함수명(암거나)   ㄴ 위 변수를 받기위한 코딩이므로 이건 약속 무조건 외워
+Path Variable
+경로  변수
+		// Integer id = 1;
+		return messageService.getMessage(id);
+	}
+
+
+★★★
+사용자의 응답(요청)을 제어 하는건 Controller
+요청에 대해서 비지니스로직을 처리(도와)주는 게 Service
+Mapper = 서비스를 도와서 데이터베이스를 제어 (데이터베이스 메소드 집합)
+★★★
+
+좋은코드란 단일 함수에 단일기능을 하고 그 기능을 묶어놓은 것
+
+
+=============0110=============
+이니셜라이즈에서 mysql과 mybatis 디펜던스 설치 후
+application.properties에 와서 세팅을 해줘야 함.
+
+
+
+=============0113=============
+https://www.w3schools.com/mysql/mysql_create_db.asp
+명령어 
+https://hardner.tistory.com/1
+여기도 괜찮은듯.

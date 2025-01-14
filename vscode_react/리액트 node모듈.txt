@@ -12,3 +12,11 @@ node_modules가 없을 경우
 
 "npx i" 를 치면
 node_modules이 깔림.
+
+
+**버전으로 인해 오류나는 경우
+npx create-react-app @@@이후
+cd @@@ 이동후
+npm start를 햇을때 버전 오류가 나는 경우에
+npm i vitals
+npm i web-vitals 입력 후 다시 스타트하면 됨
